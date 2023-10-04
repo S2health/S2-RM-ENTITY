@@ -1,0 +1,2 @@
+# S2-RM-ENTITY
+S2 RM ENTITY component
