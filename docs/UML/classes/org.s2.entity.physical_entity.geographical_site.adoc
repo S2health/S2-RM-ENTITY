@@ -1,0 +1,21 @@
+=== Geographical_site Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Geographical_site*
+
+h|*Description*
+2+a|A geographical site containing (or to contain) built edifices such as a university or hospital. Defined by a boundary, usually found in a civil cadastral system, land register etc.
+
+h|*Inherit*
+2+|`<<_fiat_line_class,Fiat_line>>`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*r_facilities*: `List<<<_facility_class,Facility>>>`
+a|The facilities within a Site; e.g. departments.
+|===

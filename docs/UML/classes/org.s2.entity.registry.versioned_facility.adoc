@@ -1,0 +1,14 @@
+=== Versioned_facility Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Versioned_facility*
+
+h|*Description*
+2+a|Static type formed by binding generic parameter of `VERSIONED_OBJECT<T>` to `ENTITY`.
+
+h|*Inherit*
+2+|`link:/releases/BASE/{base_release}/change_control.html#_versioned_object_class[Versioned_object^]`
+
+|===

@@ -1,0 +1,25 @@
+= Registry Package
+
+== Overview
+
+xxx
+
+[.text-center]
+.rm.entity.registry package
+image::{uml_diagrams_uri}/ENTITY-registry.svg[id=entity_registry, align="center"]
+
+== Class Definitions
+
+include::{uml_export_dir}/classes/{pkg}registry.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}versioned_entity.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}versioned_facility.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}versioned_party.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}versioned_asset.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}versioned_resource_item.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}versioned_resource_use.adoc[]

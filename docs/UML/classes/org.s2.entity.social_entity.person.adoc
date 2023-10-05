@@ -1,0 +1,14 @@
+=== Person Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Person*
+
+h|*Description*
+2+a|A human agent.
+
+h|*Inherit*
+2+|`<<_individual_agent_class,Individual_agent>>`
+
+|===

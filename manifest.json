@@ -1,0 +1,57 @@
+{
+    "id": "S2",
+    "title": "Entity Model",
+    "description": "S2 Entity Model Component",
+    "keywords": "reference model, S2",
+    "specifications": [
+        {
+            "id": "entity",
+            "title": "Entity Information Model",
+            "title_short": "Entity",
+            "description": "S2 Entity Information Model specification",
+            "micro_summary": "Top-level entity info model",
+            "summary": "The S2 Entity information model.",
+            "classes": [
+                "PHYSICAL_ENTITY",
+                "SOCIAL_ENTITY",
+                "RESOURCE",
+                "REGISTRY",
+                "PARTY",
+                "ASSET"
+            ],
+            "copyright_year": "2022",
+            "spec_status": "DEVELOPMENT",
+            "keywords": "Entity, demographics, reference model, S2"
+        }
+    ],
+    "expressions": [
+        {
+            "id": "S2_UML-ENTITY.mdzip",
+            "type": "uml",
+            "title": "S2 UML",
+            "description": "UML file for MagicDraw 19 for RM CARE component. Contains UML 2.5 standard XMI file."
+        },
+        {
+            "id": "S2_UML-BASE.mdzip",
+            "dependency": {
+                "component": "BASE",
+                "release": "latest"
+            }
+        }
+    ],
+    "jira": {
+        "open_issues": "11103",
+        "roadmap": "SPECRM"
+    },
+    "releases": [
+        {
+            "id": "0.0.6",
+            "date": "2023-09-29",
+            "jira": {
+                "crs": "SPECRM/versions/12516",
+                "prs": "SPECPR/versions/10061"
+            }
+        }
+    ]
+}
+

@@ -1,0 +1,27 @@
+=== Material_entity Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__Material_entity (abstract)__*
+
+h|*Description*
+2+a|Any entity consisting of physical matter. Synonym for `BFO:Material entity`.
+
+h|*Inherit*
+2+|`<<_materially_dependent_entity_class,Materially_dependent_entity>>`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*r_parts*: `List<<<_material_entity_class,Material_entity>>>`
+a|Material part-of relation from an object to other material objects that are materially connected, e.g. apartment 3-9 within the apartment block 'Mirabeau' at 32 Av. Bento Loyola, Casamarela, Recife.
+
+Excludes contained spaces, sites etc.
+
+h|*0..1*
+|*r_contains*: `List<<<_materially_dependent_entity_class,Materially_dependent_entity>>>`
+a|
+|===
