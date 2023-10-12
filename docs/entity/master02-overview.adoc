@@ -8,7 +8,7 @@ The following UML diagram illustrates the primary taxonomy of the Entity model, 
 
 [.text-center]
 .rm.entity taxonomy
-image::{uml_diagrams_uri}/ENTITY-1-overivew.svg[id=entity_taxonomy, align="center"]
+image::{uml_diagrams_uri}/ENTITY-1-overview.svg[id=entity_taxonomy, align="center"]
 
 == Ontological Basis
 
