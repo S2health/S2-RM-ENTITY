@@ -1,0 +1,14 @@
+=== Facility_kind Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Facility_kind*
+
+h|*Description*
+2+a|A built property, such as a hospital, or a part thereof, e.g. one building, operating theatre, ward, room etc normally with a specific business function. May have as sub-parts other Facilities, e.g. individual rooms. May contain other objects.
+
+h|*Inherit*
+2+|`<<_object_aggregate_kind_class,Object_aggregate_kind>>`
+
+|===

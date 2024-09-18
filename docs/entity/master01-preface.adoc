@@ -20,7 +20,7 @@ Prerequisite documents for reading this document include:
 
 Related documents include:
 
-* The {s2_base_base_types}[S2 Base Types Information Model^];
+* The {s2_base_model_support}[S2 Base Types Information Model^];
 * The {s2_base_data_types}[S2 Data Types Information Model^];
 
 == Status

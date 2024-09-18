@@ -1,0 +1,103 @@
+= Physical Entity Package
+
+== Issues
+
+* device 'type' versus device; prosthesis 'type' versus prosthesis etc. Current approach would be to handle via distinct hierarchies of archetypes for Device type and Device.
+* Should Object_aggregate.parts be a collection of Entity_rel?
+
+== Overview
+
+Following BFO, openEHR Physical entities are understood as entities existing within 3-dimensional space. They include material objects of any kind (`Material_entity`); spaces and spatial extents; and processes, including events.
+
+[.text-center]
+.rm.entity_kind.continuant package
+image::{uml_diagrams_uri}/ENTITY-entity_kind.continuant.svg[id=entity_kind_continuant, align="center"]
+
+== Semantics
+
+=== Biological Entities
+
+xxx
+
+=== Artefacts
+
+xxx
+
+=== Substances
+
+xxx
+
+=== Sites and Facilities
+
+xxx
+
+== Class Definitions
+
+include::{uml_export_dir}/classes/{pkg}entity_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}physical_entity_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}material_entity_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}materially_dependent_entity_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}spatial_region.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}object_extension_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}space.adoc[]
+
+
+include::{uml_export_dir}/classes/{pkg}geographical_site.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}facility_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}object_aggregate_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}independent_object_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}biological_entity_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}artifact_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}substance_kind.adoc[]
+
+
+include::{uml_export_dir}/classes/{pkg}material_location_kind.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}fiat_point.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}fiat_line.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}fiat_surface.adoc[]
+
+== Instance Examples
+
+xxx.
+
+=== Biological Entities
+
+==== Tissue Sample
+
+xxx.
+
+[.text-center]
+.Biological Entity
+image::{diagrams_uri}/tissue_sample.png[id=tissue_sample, align="center"]
+
+=== Artefacts
+
+==== Ultrasound Machine
+
+==== Cardiac Pacemaker
+
+=== Substances
+
+==== Medication
+
+==== Food
+
+=== Aggregate objects
+
+xxx
+

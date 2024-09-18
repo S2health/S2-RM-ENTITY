@@ -1,0 +1,26 @@
+=== Material_entity_kind Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__Material_entity_kind (abstract)__*
+
+h|*Description*
+2+a|Any entity consisting of physical matter. Synonym for `BFO:Material entity`.
+
+h|*Inherit*
+2+|`<<_materially_dependent_entity_kind_class,Materially_dependent_entity_kind>>`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*r_contains*: `List<<<_materially_dependent_entity_kind_class,Materially_dependent_entity_kind>>>`
+a|Containment relation between Material entities exclusive of Aggregate membership and Object parthood,
+
+Covers:
+
+* presence of one object within another that is not considered a part, e.g a bird within a house.
+* presence of Material locations within their
+|===

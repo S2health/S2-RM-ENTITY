@@ -1,0 +1,29 @@
+=== Address_use Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__Address_use (abstract)__*
+
+h|*Description*
+2+a|
+
+h|*Inherit*
+2+|`link:/releases/BASE/{base_release}/base.html#_locatable_class[Locatable^]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*address_type*: `link:/releases/BASE/{base_release}/base.html#_terminology_term_class[Terminology_term^]`
+a|Type of address, coded. Typical values: email, sms, pager, phone, messaging.
+
+h|*0..1*
+|*purposes*: `List<link:/releases/BASE/{base_release}/base.html#_terminology_term_class[Terminology_term^]>`
+a|Purposes for which this address may be used. Typical values include work, home, receiving goods etc.
+
+h|*0..1*
+|*time_validity*: `link:/releases/BASE/{base_release}/base.html#_timing_class[Timing^]`
+a|Valid times for this contact..
+|===

@@ -1,0 +1,25 @@
+=== Entity_kind Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__Entity_kind (abstract)__*
+
+h|*Description*
+2+a|
+
+h|*Inherit*
+2+|`link:/releases/BASE/{base_release}/base.html#_locatable_class[Locatable^]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*items*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+a|
+
+h|*0..1*
+|*relationships*: `List<<<_entity_kind_relationship_group_class,Entity_kind_relationship_group>>>`
+a|
+|===
