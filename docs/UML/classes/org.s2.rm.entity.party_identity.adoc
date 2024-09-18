@@ -1,0 +1,43 @@
+=== Party_identity Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Party_identity*
+
+h|*Description*
+2+a|An identity  of a Social entity, such as a person name or company name, and which is used by the party to identify itself. Actual structure is archetyped.
+
+h|*Inherit*
+2+|`link:/releases/BASE/{base_release}/base.html#_locatable_class[Locatable^]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*identity_type*: `link:/releases/BASE/{base_release}/base.html#_terminology_term_class[Terminology_term^]`
+a|
+
+h|*0..1*
+|*description*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+a|The value of the identity. This will usually take the form of a small structure of strings.
+
+h|*0..1*
+|*use*: `link:/releases/BASE/{base_release}/base.html#_terminology_term_class[Terminology_term^]`
+a|
+
+h|*0..1*
+|*simple_name*: `String`
+a|Single string form of name.
+h|*Functions*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*purpose* (): `link:/releases/BASE/{base_release}/base.html#_terminology_term_class[Terminology_term^]`
+a|Purpose of identity, e.g. legal ,  stage name,  nickname,  tribal name,  trading name. Taken from value of inherited `_name_` attribute.
+
+h|*Invariants*
+2+a|__Purpose_valid__: `purpose = name`
+|===

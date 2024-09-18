@@ -24,7 +24,7 @@ Parties are characterised by identity,
 
 Classes have been included for `Party_identity` and `Address`, even though they contain only a link to details, in the form of the generic `Cluster` class. This is not strictly necessary - it could have been done simply using appropriately named attributes in the classes `Party` and `Contact` - but is done to provide a place to add specific semantics in future releases of the model. It is also expected to make software development easier, since it provides explicit classes to which behaviour and other implementation attributes can be added. Lastly, it allows the notions of `Party_identity` and `Address` to be explicitly used in archetype-authoring tools.
 
-Instances of `Party_identity`, linked to `Party` by the attribute `_identities_` are intended to express the names of people, organisations, and other actors - that is names which are "owned" by the party, e.g.  self-declared (in the case of institutions and companies) or by virtue of social relations (names given by parents, tribes etc). Identifiers of Parties given by other organisations, or the state are not represented in this way, and should be recorded in the `PARTY._details_` structure instead (see below).
+Instances of `Party_identity`, linked to `Party` by the attribute `_identities_` are intended to express the names of people, organisations, and other actors - that is names which are "owned" by the party, e.g.  self-declared (in the case of institutions and companies) or by virtue of social relations (names given by parents, tribes etc). Identifiers of Parties given by other organisations, or the state are not represented in this way, and should be recorded in the `Party._details_` structure instead (see below).
 
 == Party Relationships and Accountability
 
@@ -46,11 +46,15 @@ include::{uml_export_dir}/classes/{pkg}persona.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}party_identity.adoc[]
 
-include::{uml_export_dir}/classes/{pkg}contact.adoc[]
+include::{uml_export_dir}/classes/{pkg}address_use.adoc[]
 
-include::{uml_export_dir}/classes/{pkg}address.adoc[]
+include::{uml_export_dir}/classes/{pkg}location_address_use.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}comms_address_use.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}capability.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}language_capability.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}aggregate_agent.adoc[]
 
@@ -58,7 +62,7 @@ include::{uml_export_dir}/classes/{pkg}org_entity.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}org_unit.adoc[]
 
-include::{uml_export_dir}/classes/{pkg}organisation.adoc[]
+include::{uml_export_dir}/classes/{pkg}organization.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}individual_agent.adoc[]
 
@@ -68,6 +72,8 @@ include::{uml_export_dir}/classes/{pkg}person.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}party_relationship.adoc[]
 
+include::{uml_export_dir}/classes/{pkg}id_use.adoc[]
+
 == Instance Examples
 
 In the following instance examples, the values of the attributes uid, source, target, and reverse_relationships are not meant to be taken as literally valid `OBJECT_IDs` - for the purposes of clarity, simple integers have been used.
@@ -76,7 +82,7 @@ In the following instance examples, the values of the attributes uid, source, ta
 
 ==== Person
 
-The diagram below illustrates a possible set of instances for a `PERSON`, with home and work contact information.  There are separate archetypes for the `PERSON`, each `Address`, and each `Party_identity`. In the following figure, "meaning" is the meaning from the value of the archetype_node_id attribute, functionally derived from the archetype local ontology.
+The diagram below illustrates a possible set of instances for a `Person`, with home and work contact information.  There are separate archetypes for the `Person`, each `Address`, and each `Party_identity`. In the following figure, "meaning" is the meaning from the value of the archetype_node_id attribute, functionally derived from the archetype local ontology.
 
 ==== Clinician
 
@@ -86,7 +92,7 @@ The diagram below illustrates a possible set of instances for a `PERSON`, with h
 
 ==== Group
 
-The figure below illustrates the demographic information for a cadiac surgery team in a hospital. The group includes a head surgeon, anaesthetist, assistant surgeon, and presumably others (not shown). Each of these members of the team have an employment relationship with the hospital (shown only for one surgeon, in the interests of clarity).
+The figure below illustrates the demographic information for a cardiac surgery team in a hospital. The group includes a head surgeon, anaesthetist, assistant surgeon, and presumably others (not shown). Each of these members of the team have an employment relationship with the hospital (shown only for one surgeon, in the interests of clarity).
 
 
 === Relationships

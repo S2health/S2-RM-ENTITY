@@ -17,7 +17,7 @@ The following UML diagram illustrates the upper Entity model.
 .rm.entity
 image::{uml_diagrams_uri}/ENTITY-entity.svg[id=entity_entity, align="center"]
 
-== Semantics
+== Taxonomy
 
 The concrete representation chosen for connecting relationships to owning Entities is intended to facilitate realistic database implementations containing very large numbers (e.g. O(100m)) of Entities, potentially with large numbers of relationships (e.g. O(100)).
 
@@ -33,4 +33,4 @@ include::{uml_export_dir}/classes/{pkg}entity.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}entity_relationship.adoc[]
 
-include::{uml_export_dir}/classes/{pkg}relationship_group.adoc[]
+include::{uml_export_dir}/classes/{pkg}entity_relationship_group.adoc[]

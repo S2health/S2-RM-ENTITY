@@ -56,7 +56,7 @@ The work reported in this paper has been funded in part by the following organis
 :sectnums:
 
 ifdef::package_qualifiers[]
-:pkg: org.s2.entity.entity.
+:pkg: org.s2.rm.entity.
 endif::[]
 
 include::master01-preface.adoc[leveloffset=+1]
@@ -64,13 +64,13 @@ include::master02-overview.adoc[leveloffset=+1]
 include::master03-entity.adoc[leveloffset=+1]
 
 ifdef::package_qualifiers[]
-:pkg: org.s2.entity.physical_entity.
+:pkg: org.s2.rm.entity.
 endif::[]
 
-include::master04-physical_entity.adoc[leveloffset=+1]
+include::master05-entity_kind_occurrent.adoc[leveloffset=+1]
 
 ifdef::package_qualifiers[]
-:pkg: org.s2.entity.social_entity.
+:pkg: org.s2.rm.entity.
 endif::[]
 
 include::master05-social_entity.adoc[leveloffset=+1]
@@ -78,13 +78,13 @@ include::master06-social_entity-party.adoc[leveloffset=+1]
 include::master07-social_entity-asset.adoc[leveloffset=+1]
 
 ifdef::package_qualifiers[]
-:pkg: org.s2.entity.resource.
+:pkg: org.s2.rm.entity.
 endif::[]
 
 include::master08-resource.adoc[leveloffset=+1]
 
 ifdef::package_qualifiers[]
-:pkg: org.s2.entity.registry.
+:pkg: org.s2.rm.entity.
 endif::[]
 
 include::master09-registry.adoc[leveloffset=+1]

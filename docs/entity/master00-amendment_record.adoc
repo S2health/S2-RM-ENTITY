@@ -4,11 +4,19 @@
 |===
 |Issue|Details|Raiser|Completed
 
-4+^h|*RM Release 1.?.?*
+4+^h|*BASE Release 0.8.5*
 
 |[[latest_issue]]0.3.0
-|{spec_tickets}/SPECRM-?[SPECRM-?^]: Initial writing; adapted from Demographic IM.
+|{spec_tickets}/S2ENTITY-3[S2ENTITY-3^]: Improve Party details, including addresses, identity; +
+ {spec_tickets}/S2ENTITY-6[S2ENTITY-6^]: Create Entity_kind hierarchy, and convert Physical entity hierarchy to xxx_kind; +
+ {spec_tickets}/S2ENTITY-7[S2ENTITY-7^]: Add new physical entity hierarchy to represent individuals; +
+ {spec_tickets}/S2ENTITY-8[S2ENTITY-8^]: Add support for occurrents, including processes
 |T Beale
 |[[latest_issue_date]]15 Oct 2022
+
+|0.3.0
+|{spec_tickets}/SPECRM-?[SPECRM-?^]: Initial writing; adapted from Demographic IM.
+|T Beale
+|15 Oct 2022
 
 |===
