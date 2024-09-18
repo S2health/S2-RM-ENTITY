@@ -46,11 +46,15 @@ include::{uml_export_dir}/classes/{pkg}persona.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}party_identity.adoc[]
 
-include::{uml_export_dir}/classes/{pkg}contact.adoc[]
+include::{uml_export_dir}/classes/{pkg}address_use.adoc[]
 
-include::{uml_export_dir}/classes/{pkg}address.adoc[]
+include::{uml_export_dir}/classes/{pkg}location_address_use.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}comms_address_use.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}capability.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}language_capability.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}aggregate_agent.adoc[]
 
@@ -58,7 +62,7 @@ include::{uml_export_dir}/classes/{pkg}org_entity.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}org_unit.adoc[]
 
-include::{uml_export_dir}/classes/{pkg}organisation.adoc[]
+include::{uml_export_dir}/classes/{pkg}organization.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}individual_agent.adoc[]
 
@@ -67,6 +71,8 @@ include::{uml_export_dir}/classes/{pkg}automaton.adoc[]
 include::{uml_export_dir}/classes/{pkg}person.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}party_relationship.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}id_use.adoc[]
 
 == Instance Examples
 

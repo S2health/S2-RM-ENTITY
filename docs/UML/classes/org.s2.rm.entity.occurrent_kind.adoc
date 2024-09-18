@@ -1,0 +1,16 @@
+=== Occurrent_kind Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__Occurrent_kind (abstract)__*
+
+h|*Description*
+2+a|Entities whose extension is purely temporal, including processes, events etc.
+
+Equivalent to BFO:occurrent.
+
+h|*Inherit*
+2+|`<<_entity_kind_class,Entity_kind>>`
+
+|===

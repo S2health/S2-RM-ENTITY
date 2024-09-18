@@ -1,4 +1,4 @@
-:spec_title: Entity Information Model
+:spec_title: S2 Entity Information Model
 :copyright_year: 2022
 :spec_status: DEVELOPMENT
 :keywords: Entity, demographics, reference model, S2

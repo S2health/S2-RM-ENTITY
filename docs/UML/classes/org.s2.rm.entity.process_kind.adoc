@@ -1,0 +1,14 @@
+=== Process_kind Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Process_kind*
+
+h|*Description*
+2+a|
+
+h|*Inherit*
+2+|`<<_occurrent_kind_class,Occurrent_kind>>`
+
+|===

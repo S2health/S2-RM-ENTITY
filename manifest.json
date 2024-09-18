@@ -6,7 +6,7 @@
     "specifications": [
         {
             "id": "entity",
-            "title": "Entity Information Model",
+            "title": "S2 Entity Information Model",
             "title_short": "Entity",
             "description": "S2 Entity Information Model specification",
             "micro_summary": "Top-level entity info model",

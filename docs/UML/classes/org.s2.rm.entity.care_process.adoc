@@ -1,0 +1,21 @@
+=== Care_process Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Care_process*
+
+h|*Description*
+2+a|
+
+h|*Inherit*
+2+|`<<_process_class,Process>>`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*subject*: `link:/releases/BASE/{base_release}/base.html#_entity_ref_node_class[Entity_ref_node^]`
+a|
+|===

@@ -1,0 +1,21 @@
+=== Material_location_kind Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__Material_location_kind (abstract)__*
+
+h|*Description*
+2+a|Equivalent of BFO:Continuant fiat boundary, except classified under materially-dependent entity.
+
+h|*Inherit*
+2+|`<<_materially_dependent_entity_kind_class,Materially_dependent_entity_kind>>`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*r_host*: `<<_material_entity_kind_class,Material_entity_kind>>`
+a|Material entity on which the Material location is defined.
+|===

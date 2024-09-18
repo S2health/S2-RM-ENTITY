@@ -7,7 +7,7 @@
 <meta name="generator" content="Asciidoctor 2.0.16">
 <meta name="description" content="S2 Entity Information Model specification">
 <meta name="keywords" content="Entity, demographics, reference model, S2">
-<title>Entity Information Model</title>
+<title>S2 Entity Information Model</title>
 <link rel="stylesheet" href="https://specifications.openehr.org/styles/openehr.css">
 </head>
 <body class="book toc2 toc-left">
@@ -15,7 +15,7 @@
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel0">
-<li><a href="#_entity_information_model">Entity Information Model</a>
+<li><a href="#_s2_entity_information_model">S2 Entity Information Model</a>
 <ul class="sectlevel1">
 <li><a href="#_amendment_record">Amendment Record</a></li>
 <li><a href="#_acknowledgements">Acknowledgements</a>
@@ -45,13 +45,13 @@
 <li><a href="#_upper_entity_model">3. Upper Entity Model</a>
 <ul class="sectlevel2">
 <li><a href="#_overview_2">3.1. Overview</a></li>
-<li><a href="#_semantics">3.2. Semantics</a></li>
+<li><a href="#_taxonomy">3.2. Taxonomy</a></li>
 <li><a href="#_archetyping_2">3.3. Archetyping</a></li>
 <li><a href="#_class_definitions">3.4. Class Definitions</a>
 <ul class="sectlevel3">
 <li><a href="#_entity_class">3.4.1. Entity Class</a></li>
 <li><a href="#_entity_relationship_class">3.4.2. Entity_relationship Class</a></li>
-<li><a href="#_relationship_group_class">3.4.3. Relationship_group Class</a></li>
+<li><a href="#_entity_relationship_group_class">3.4.3. Entity_relationship_group Class</a></li>
 </ul>
 </li>
 </ul>
@@ -60,55 +60,15 @@
 <ul class="sectlevel2">
 <li><a href="#_issues">4.1. Issues</a></li>
 <li><a href="#_overview_3">4.2. Overview</a></li>
-<li><a href="#_semantics_2">4.3. Semantics</a>
+<li><a href="#_taxonomy_2">4.3. Taxonomy</a>
 <ul class="sectlevel3">
-<li><a href="#_biological_entities">4.3.1. Biological Entities</a></li>
-<li><a href="#_artefacts">4.3.2. Artefacts</a></li>
-<li><a href="#_substances">4.3.3. Substances</a></li>
-<li><a href="#_sites_and_facilities">4.3.4. Sites and Facilities</a></li>
+<li><a href="#_processes">4.3.1. Processes</a></li>
 </ul>
 </li>
 <li><a href="#_class_definitions_2">4.4. Class Definitions</a>
 <ul class="sectlevel3">
-<li><a href="#_physical_entity_class">4.4.1. Physical_entity Class</a></li>
-<li><a href="#_material_entity_class">4.4.2. Material_entity Class</a></li>
-<li><a href="#_materially_dependent_entity_class">4.4.3. Materially_dependent_entity Class</a></li>
-<li><a href="#_spatial_region_class">4.4.4. Spatial_region Class</a></li>
-<li><a href="#_object_extension_part_class">4.4.5. Object_extension_part Class</a></li>
-<li><a href="#_space_class">4.4.6. Space Class</a></li>
-<li><a href="#_geographical_site_class">4.4.7. Geographical_site Class</a></li>
-<li><a href="#_facility_class">4.4.8. Facility Class</a></li>
-<li><a href="#_object_aggregate_class">4.4.9. Object_aggregate Class</a></li>
-<li><a href="#_independent_object_class">4.4.10. Independent_object Class</a></li>
-<li><a href="#_biological_entity_class">4.4.11. Biological_entity Class</a></li>
-<li><a href="#_artefact_class">4.4.12. Artefact Class</a></li>
-<li><a href="#_substance_class">4.4.13. Substance Class</a></li>
-<li><a href="#_material_location_class">4.4.14. Material_location Class</a></li>
-<li><a href="#_fiat_point_class">4.4.15. Fiat_point Class</a></li>
-<li><a href="#_fiat_line_class">4.4.16. Fiat_line Class</a></li>
-<li><a href="#_fiat_surface_class">4.4.17. Fiat_surface Class</a></li>
-</ul>
-</li>
-<li><a href="#_instance_examples">4.5. Instance Examples</a>
-<ul class="sectlevel3">
-<li><a href="#_biological_entities_2">4.5.1. Biological Entities</a>
-<ul class="sectlevel4">
-<li><a href="#_tissue_sample">4.5.1.1. Tissue Sample</a></li>
-</ul>
-</li>
-<li><a href="#_artefacts_2">4.5.2. Artefacts</a>
-<ul class="sectlevel4">
-<li><a href="#_ultrasound_machine">4.5.2.1. Ultrasound Machine</a></li>
-<li><a href="#_cardiac_pacemaker">4.5.2.2. Cardiac Pacemaker</a></li>
-</ul>
-</li>
-<li><a href="#_substances_2">4.5.3. Substances</a>
-<ul class="sectlevel4">
-<li><a href="#_medication">4.5.3.1. Medication</a></li>
-<li><a href="#_food">4.5.3.2. Food</a></li>
-</ul>
-</li>
-<li><a href="#_aggregate_objects">4.5.4. Aggregate objects</a></li>
+<li><a href="#_occurrent_kind_class">4.4.1. Occurrent_kind Class</a></li>
+<li><a href="#_process_kind_class">4.4.2. Process_kind Class</a></li>
 </ul>
 </li>
 </ul>
@@ -138,20 +98,23 @@
 <li><a href="#_agent_class">6.4.2. Agent Class</a></li>
 <li><a href="#_persona_class">6.4.3. Persona Class</a></li>
 <li><a href="#_party_identity_class">6.4.4. Party_identity Class</a></li>
-<li><a href="#_contact_class">6.4.5. Contact Class</a></li>
-<li><a href="#_address_class">6.4.6. Address Class</a></li>
-<li><a href="#_capability_class">6.4.7. Capability Class</a></li>
-<li><a href="#_aggregate_agent_class">6.4.8. Aggregate_agent Class</a></li>
-<li><a href="#_org_entity_class">6.4.9. Org_entity Class</a></li>
-<li><a href="#_org_unit_class">6.4.10. Org_unit Class</a></li>
-<li><a href="#_organisation_class">6.4.11. Organisation Class</a></li>
-<li><a href="#_individual_agent_class">6.4.12. Individual_agent Class</a></li>
-<li><a href="#_automaton_class">6.4.13. Automaton Class</a></li>
-<li><a href="#_person_class">6.4.14. Person Class</a></li>
-<li><a href="#_party_relationship_class">6.4.15. Party_relationship Class</a></li>
+<li><a href="#_address_use_class">6.4.5. Address_use Class</a></li>
+<li><a href="#_location_address_use_class">6.4.6. Location_address_use Class</a></li>
+<li><a href="#_comms_address_use_class">6.4.7. Comms_address_use Class</a></li>
+<li><a href="#_capability_class">6.4.8. Capability Class</a></li>
+<li><a href="#_language_capability_class">6.4.9. Language_capability Class</a></li>
+<li><a href="#_aggregate_agent_class">6.4.10. Aggregate_agent Class</a></li>
+<li><a href="#_org_entity_class">6.4.11. Org_entity Class</a></li>
+<li><a href="#_org_unit_class">6.4.12. Org_unit Class</a></li>
+<li><a href="#_organization_class">6.4.13. Organization Class</a></li>
+<li><a href="#_individual_agent_class">6.4.14. Individual_agent Class</a></li>
+<li><a href="#_automaton_class">6.4.15. Automaton Class</a></li>
+<li><a href="#_person_class">6.4.16. Person Class</a></li>
+<li><a href="#_party_relationship_class">6.4.17. Party_relationship Class</a></li>
+<li><a href="#_id_use_class">6.4.18. Id_use Class</a></li>
 </ul>
 </li>
-<li><a href="#_instance_examples_2">6.5. Instance Examples</a>
+<li><a href="#_instance_examples">6.5. Instance Examples</a>
 <ul class="sectlevel3">
 <li><a href="#_parties">6.5.1. Parties</a>
 <ul class="sectlevel4">
@@ -185,12 +148,12 @@
 <li><a href="#_service_class">7.2.5. Service Class</a></li>
 </ul>
 </li>
-<li><a href="#_semantics_3">7.3. Semantics</a>
+<li><a href="#_semantics">7.3. Semantics</a>
 <ul class="sectlevel3">
 <li><a href="#_service">7.3.1. Service</a></li>
 </ul>
 </li>
-<li><a href="#_instance_examples_3">7.4. Instance Examples</a>
+<li><a href="#_instance_examples_2">7.4. Instance Examples</a>
 <ul class="sectlevel3">
 <li><a href="#_property">7.4.1. Property</a></li>
 <li><a href="#_equipment">7.4.2. Equipment</a></li>
@@ -210,16 +173,16 @@
 <li><a href="#_consumable_use_class">8.2.3. Consumable_use Class</a></li>
 </ul>
 </li>
-<li><a href="#_instance_examples_4">8.3. Instance Examples</a>
+<li><a href="#_instance_examples_3">8.3. Instance Examples</a>
 <ul class="sectlevel3">
-<li><a href="#_biological_entities_3">8.3.1. Biological Entities</a>
+<li><a href="#_biological_entities">8.3.1. Biological Entities</a>
 <ul class="sectlevel4">
 <li><a href="#_xxx">8.3.1.1. XXX</a></li>
 </ul>
 </li>
-<li><a href="#_artefacts_3">8.3.2. Artefacts</a></li>
-<li><a href="#_substances_3">8.3.3. Substances</a></li>
-<li><a href="#_aggregate_objects_2">8.3.4. Aggregate objects</a></li>
+<li><a href="#_artefacts">8.3.2. Artefacts</a></li>
+<li><a href="#_substances">8.3.3. Substances</a></li>
+<li><a href="#_aggregate_objects">8.3.4. Aggregate objects</a></li>
 </ul>
 </li>
 </ul>
@@ -251,12 +214,12 @@
 <div class="sectionbody">
 <div class="imageblock text-center">
 <div class="content">
-<img src="http://s2health.io/logo.png" alt="S2 logo">
+<img src="https://studious-adventure-evrqgo5.pages.github.io/resources/logos/S2-logo.svg" alt="S2 logo">
 </div>
 </div>
 </div>
 </div>
-<h1 id="_entity_information_model" class="sect0"><a class="anchor" href="#_entity_information_model"></a>Entity Information Model</h1>
+<h1 id="_s2_entity_information_model" class="sect0"><a class="anchor" href="#_s2_entity_information_model"></a>S2 Entity Information Model</h1>
 <div class="openblock partintro">
 <div class="content">
 <table class="tableblock frame-all grid-all fit-content spread">
@@ -266,7 +229,7 @@
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-center valign-top" colspan="2"><strong>Issuer</strong>: <a href="http://s2health.io" target="_blank" rel="noopener">S2 Foundation</a></th>
+<th class="tableblock halign-center valign-top" colspan="2"><strong>Issuer</strong>: <a href="http://s2health.org" target="_blank" rel="noopener">S2 Health</a></th>
 </tr>
 </thead>
 <tbody>
@@ -290,12 +253,12 @@
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-center valign-top" colspan="2">&#169; 2022 - 2023 S2 Foundation</th>
+<th class="tableblock halign-center valign-top" colspan="2">&#169; 2022 - 2024 S2 Health</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><a href="http://s2health.io" target="_blank" rel="noopener">S2 Foundation</a> is an independent, non-profit foundation.</p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><a href="http://s2health.org" target="_blank" rel="noopener">S2 Health</a> is an independent, non-profit foundation.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Licence</strong></p></td>
@@ -303,8 +266,8 @@
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Support</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Issues: <a href="https://specifications.s2health.io/components/ENTITY/open_issues" target="_blank" rel="noopener">Report an Issue</a><br>
- Web: <a href="https://specifications.s2health.io" target="_blank" rel="noopener">specifications.S2.io</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues: <a href="https://specifications.s2health.org/components/ENTITY/open_issues" target="_blank" rel="noopener">Report an Issue</a><br>
+ Web: <a href="https://specifications.s2health.org" target="_blank" rel="noopener">https://specifications.s2health.org</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -334,7 +297,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue"></a>0.3.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://specifications.openehr.org/tickets/SPECRM-?" target="_blank" rel="noopener">SPECRM-?</a>: Initial writing; adapted from Demographic IM.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://specifications.s2health.org/tickets/SPECRM-?" target="_blank" rel="noopener">SPECRM-?</a>: Initial writing; adapted from Demographic IM.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">T Beale</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue_date"></a>15 Oct 2022</p></td>
 </tr>
@@ -425,7 +388,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="https://specifications.s2health.io/releases/RM/latest/architecture_overview.html" target="_blank" rel="noopener">S2 Architecture Overview</a>.</p>
+<p>The <a href="https://specifications.s2health.org/releases/RM/latest/architecture_overview.html" target="_blank" rel="noopener">S2 Architecture Overview</a>.</p>
 </li>
 </ul>
 </div>
@@ -435,10 +398,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="https://specifications.s2health.io/releases/BASE/latest/base_types.html" target="_blank" rel="noopener">S2 Base Types Information Model</a>;</p>
+<p>The <a href="https://specifications.s2health.org/releases/BASE/latest/model_support.html" target="_blank" rel="noopener">S2 Base Types Information Model</a>;</p>
 </li>
 <li>
-<p>The <a href="https://specifications.s2health.io/releases/BASE/latest/data_types.html" target="_blank" rel="noopener">S2 Data Types Information Model</a>;</p>
+<p>The <a href="https://specifications.s2health.org/releases/BASE/latest/data_types.html" target="_blank" rel="noopener">S2 Data Types Information Model</a>;</p>
 </li>
 </ul>
 </div>
@@ -461,10 +424,10 @@
 <p>Feedback may be provided on the <a href="http://S2.io" target="_blank" rel="noopener">openEHR RM specifications forum</a>.</p>
 </div>
 <div class="paragraph">
-<p>Issues may be raised on the <a href="https://specifications.s2health.io/components/ENTITY/open_issues" target="_blank" rel="noopener">specifications Problem Report tracker</a>.</p>
+<p>Issues may be raised on the <a href="https://specifications.s2health.org/components/ENTITY/open_issues" target="_blank" rel="noopener">specifications Problem Report tracker</a>.</p>
 </div>
 <div class="paragraph">
-<p>To see changes made due to previously reported issues, see the <a href="https://specifications.s2health.io/components/ENTITY/history" target="_blank" rel="noopener">ENTITY component Change Request tracker</a>.</p>
+<p>To see changes made due to previously reported issues, see the <a href="https://specifications.s2health.org/components/ENTITY/history" target="_blank" rel="noopener">ENTITY component Change Request tracker</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -569,7 +532,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_semantics"><a class="anchor" href="#_semantics"></a>3.2. Semantics</h3>
+<h3 id="_taxonomy"><a class="anchor" href="#_taxonomy"></a>3.2. Taxonomy</h3>
 <div class="paragraph">
 <p>The concrete representation chosen for connecting relationships to owning Entities is intended to facilitate realistic database implementations containing very large numbers (e.g. O(100m)) of Entities, potentially with large numbers of relationships (e.g. O(100)).</p>
 </div>
@@ -606,7 +569,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base_types.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -615,34 +578,22 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/patterns.html#_item_class" target="_blank" rel="noopener">Item</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>domain_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>URI to a detailed description of the concrete type of Entity represented by instances of any descendant of this class. For example, a specific archetype of <code>Person</code> might be used to represent Employees. This field might then contain a URI pointing to the relevant description of 'employee' within the owning organisation.</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>other_details</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Archetypable generic description for this entity.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type_uri</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_uri_class" target="_blank" rel="noopener">Uri</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>URI to a detailed description of the concrete type of Entity represented by instances of any descendant of this class. For example, a specific archetype of <code>PERSON</code> might be used to represent Employees. This field might then contain a URI pointing to the relevant description of 'employee' within the owning organisation.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>relationships</strong>: <code>List&lt;<a href="#_relationship_group_class">Relationship_group</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>relationships</strong>: <code>List&lt;<a href="#_entity_relationship_group_class">Entity_relationship_group</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Functions</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type</strong> (): <code><a href="/releases/BASE/latest/foundation_types.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Concrete type of entity, such as  <code>PERSON</code>,  <code>ORGANISATION</code>, etc. Role name, e.g.  general practitioner ,  nurse ,  private citizen . Taken from inherited <code><em>name</em></code> attribute.</p>
-</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -666,7 +617,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base_types.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -675,35 +626,35 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>source</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_string_class" target="_blank" rel="noopener">String</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>source</strong>: <code><a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Source of relationship, may be understood as 'owner' of relationship.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>domain_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Type of relationship, such as  employment,  authority,  health provider.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>target</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_string_class" target="_blank" rel="noopener">String</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>target</strong>: <code><a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Target of relationship.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>time_validity</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_interval_class">Interval<sup></a>&lt;<a href="/releases/BASE/latest/foundation_types.html#_date_class">Date</sup></a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>time_validity</strong>: <code><a href="/releases/BASE/latest/base.html#_interval_class">Interval<sup></a>&lt;<a href="/releases/BASE/latest/base.html#_date_class">Date</sup></a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Valid time interval for this relationship.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/patterns.html#_item_class" target="_blank" rel="noopener">Item</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>other_details</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Archetypable generic description for this relationship.</p>
 </div></div></td>
@@ -712,7 +663,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_relationship_group_class"><a class="anchor" href="#_relationship_group_class"></a>3.4.3. Relationship_group Class</h4>
+<h4 id="_entity_relationship_group_class"><a class="anchor" href="#_entity_relationship_group_class"></a>3.4.3. Entity_relationship_group Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -722,7 +673,7 @@
 <tbody>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Relationship_group</strong></p></th>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Entity_relationship_group</strong></p></th>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
@@ -731,21 +682,27 @@
 </div></div></td>
 </tr>
 <tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+</tr>
+<tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>members</strong>: <code>List&lt;String&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>members</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Individual relationships within this group (type).</p>
 </div></div></td>
 </tr>
 <tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>domain_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>URI to a detailed description of the concrete type of Entity represented by instances of any descendant of this class. For example, a specific archetype of <code>Person</code> might be used to represent Employees. This field might then contain a URI pointing to the relevant description of 'employee' within the owning organisation.</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -774,35 +731,17 @@
 <div class="paragraph">
 <p>Following BFO, openEHR Physical entities are understood as entities existing within 3-dimensional space. They include material objects of any kind (<code>Material_entity</code>); spaces and spatial extents; and processes, including events.</p>
 </div>
-<div id="entity_physical_entity" class="imageblock text-center text-center">
+<div id="entity_kind_occurrent" class="imageblock text-center text-center">
 <div class="content">
-<img src="UML/diagrams/ENTITY-physical_entity.svg.svg" alt="ENTITY physical entity.svg">
+<img src="UML/diagrams/entity_kind.occurrent.svg" alt="entity kind.occurrent">
 </div>
-<div class="title">Figure 3. rm.entity.physical_entity package</div>
+<div class="title">Figure 3. rm.entity_kind.occurrent package</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_semantics_2"><a class="anchor" href="#_semantics_2"></a>4.3. Semantics</h3>
+<h3 id="_taxonomy_2"><a class="anchor" href="#_taxonomy_2"></a>4.3. Taxonomy</h3>
 <div class="sect3">
-<h4 id="_biological_entities"><a class="anchor" href="#_biological_entities"></a>4.3.1. Biological Entities</h4>
-<div class="paragraph">
-<p>xxx</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_artefacts"><a class="anchor" href="#_artefacts"></a>4.3.2. Artefacts</h4>
-<div class="paragraph">
-<p>xxx</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_substances"><a class="anchor" href="#_substances"></a>4.3.3. Substances</h4>
-<div class="paragraph">
-<p>xxx</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_sites_and_facilities"><a class="anchor" href="#_sites_and_facilities"></a>4.3.4. Sites and Facilities</h4>
+<h4 id="_processes"><a class="anchor" href="#_processes"></a>4.3.1. Processes</h4>
 <div class="paragraph">
 <p>xxx</p>
 </div>
@@ -811,7 +750,7 @@
 <div class="sect2">
 <h3 id="_class_definitions_2"><a class="anchor" href="#_class_definitions_2"></a>4.4. Class Definitions</h3>
 <div class="sect3">
-<h4 id="_physical_entity_class"><a class="anchor" href="#_physical_entity_class"></a>4.4.1. Physical_entity Class</h4>
+<h4 id="_occurrent_kind_class"><a class="anchor" href="#_occurrent_kind_class"></a>4.4.1. Occurrent_kind Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -821,29 +760,26 @@
 <tbody>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Physical_entity (abstract)</em></strong></p></th>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Occurrent_kind (abstract)</em></strong></p></th>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
 <td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Entities with physical existence, in the realist sense of BFO. Includes material entities (entities consisting of matter) and physical entities corresponding to voids and spaces created by Material entities.</p>
+<p>Entities whose extension is purely temporal, including processes, events etc.</p>
 </div>
 <div class="paragraph">
-<p>Equivalent to <code>BFO::Independent Continuant</code>, except that Spatial regions are excluded.</p>
-</div>
-<div class="paragraph">
-<p>Various kinds of Physical Entity may be used to resolve 'anatomical location', i.e. location on the body of an organism, including (following FMA) anatomical spaces (i.e. cavities) and anatomical structures.</p>
+<p>Equivalent to BFO:occurrent.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/ENTITY/{entity_release}/entity.html#_entity_class" target="_blank" rel="noopener">Entity</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_entity_kind_class">Entity_kind</a></code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_material_entity_class"><a class="anchor" href="#_material_entity_class"></a>4.4.2. Material_entity Class</h4>
+<h4 id="_process_kind_class"><a class="anchor" href="#_process_kind_class"></a>4.4.2. Process_kind Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -853,592 +789,18 @@
 <tbody>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Material_entity (abstract)</em></strong></p></th>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Process_kind</strong></p></th>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Any entity consisting of physical matter. Synonym for <code>BFO:Material entity</code>.</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top" colspan="2"><div class="content"></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_materially_dependent_entity_class">Materially_dependent_entity</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_parts</strong>: <code>List&lt;<a href="#_material_entity_class">Material_entity</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Material part-of relation from an object to other material objects that are materially connected, e.g. apartment 3-9 within the apartment block 'Mirabeau' at 32 Av. Bento Loyola, Casamarela, Recife.</p>
-</div>
-<div class="paragraph">
-<p>Excludes contained spaces, sites etc.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_contains</strong>: <code>List&lt;<a href="#_materially_dependent_entity_class">Materially_dependent_entity</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_occurrent_kind_class">Occurrent_kind</a></code></p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect3">
-<h4 id="_materially_dependent_entity_class"><a class="anchor" href="#_materially_dependent_entity_class"></a>4.4.3. Materially_dependent_entity Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Materially_dependent_entity (abstract)</em></strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>An entity that is either a Material entity or materially depends on a Material entity.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_physical_entity_class">Physical_entity</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_spatial_region_class"><a class="anchor" href="#_spatial_region_class"></a>4.4.4. Spatial_region Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Spatial_region (abstract)</em></strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Equivalent to <code>BFO:Spatial region</code>.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_physical_entity_class">Physical_entity</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_object_extension_part_class"><a class="anchor" href="#_object_extension_part_class"></a>4.4.5. Object_extension_part Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Object_extension_part (abstract)</em></strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Any part of an Object extension, which is an independent object plus any enclosed spaces.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_material_entity_class">Material_entity</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1<br>
-(redefined)</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_parts</strong>: <code>List&lt;<a href="#_object_extension_part_class">Object_extension_part</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Material part-of relation from an object to other material objects that are materially connected, e.g. apartment 3-9 within the apartment block 'Mirabeau' at 32 Av. Bento Loyola, Casamarela, Recife.</p>
-</div>
-<div class="paragraph">
-<p>Excludes contained spaces, sites etc.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_space_class"><a class="anchor" href="#_space_class"></a>4.4.6. Space Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Space</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>A three-dimensional Materially-dependent entity that is partially or wholly bounded by a Material Entity. Examples: naturally and partially fiat-defined cavities, holes and spaces.</p>
-</div>
-<div class="paragraph">
-<p>Descendant types provide examples.</p>
-</div>
-<div class="paragraph">
-<p>Similar to <code>BFO:Site</code>.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_object_extension_part_class">Object_extension_part</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1<br>
-(redefined)</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_parts</strong>: <code>List&lt;<a href="#_space_class">Space</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sub-parts of a Space.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_geographical_site_class"><a class="anchor" href="#_geographical_site_class"></a>4.4.7. Geographical_site Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Geographical_site</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>A geographical site containing (or to contain) built edifices such as a university or hospital. Defined by a boundary, usually found in a civil cadastral system, land register etc.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_fiat_line_class">Fiat_line</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_facilities</strong>: <code>List&lt;<a href="#_facility_class">Facility</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The facilities within a Site; e.g. departments.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_facility_class"><a class="anchor" href="#_facility_class"></a>4.4.8. Facility Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Facility</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>A physical edifice or part thereof, e.g. a building, theatre, ward, room etc normally with a specific business function. May have as sub-parts other Facilities, e.g. individual rooms. May contain other objects.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_object_aggregate_class">Object_aggregate</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_object_aggregate_class"><a class="anchor" href="#_object_aggregate_class"></a>4.4.9. Object_aggregate Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Object_aggregate</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Synonym for <code>BFO:Object aggregate</code>. Member parts are causally independent Entities - either more Object aggregates, or else Independent objects.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_material_entity_class">Material_entity</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_members</strong>: <code>List&lt;<a href="#_material_entity_class">Material_entity</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Containment relation between an Object aggregate and other objects located within but not materially part of the aggregate, for example equipment in a room.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1<br>
-(redefined)</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_parts</strong>: <code>List&lt;<a href="#_object_aggregate_class">Object_aggregate</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Material part-of relation from an object to other material objects that are materially connected, e.g. apartment 3-9 within the apartment block 'Mirabeau' at 32 Av. Bento Loyola, Casamarela, Recife.</p>
-</div>
-<div class="paragraph">
-<p>Excludes contained spaces, sites etc.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_independent_object_class"><a class="anchor" href="#_independent_object_class"></a>4.4.10. Independent_object Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Independent_object (abstract)</em></strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Synonym for <code>BFO:object</code> ('Object' is generally a problematic term in a class model, hence 'independent object'). Understood as a causally independent / unified object, following BFO.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_object_extension_part_class">Object_extension_part</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_biological_entity_class"><a class="anchor" href="#_biological_entity_class"></a>4.4.11. Biological_entity Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Biological_entity</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Any entity containing DNA and/or RNA and primarily considered as an organism (rather than an object) or part thereof, including:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>living organisms;</p>
-</li>
-<li>
-<p>deceased organisms;</p>
-</li>
-<li>
-<p>body parts;</p>
-</li>
-<li>
-<p>tissue, including blood;</p>
-</li>
-<li>
-<p>bacteria and viruses.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Note that many objects contain RNA, such as food and most everyday objects on which bacteria can be found, but are not in themselves organisms or considered from a biological point of view. However, in a case of food poisoning determined to have as its source certain food (say, hotel sandwiches), a culture taken from the food and/or human sufferers would be considered a Biological entity.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_independent_object_class">Independent_object</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_artefact_class"><a class="anchor" href="#_artefact_class"></a>4.4.12. Artefact Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Artefact</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>An artificial (i.e. manufactured) object with a designed function. Encompasses re-usable / long-term use devices (e.g. heart-rate monitor; ultrasound machine, any prosthesis) and consumable items designed to be consumed in use, bandage, catheter, drug, food.</p>
-</div>
-<div class="paragraph">
-<p>A device is considered to be usable until it is determined to be 'worn out' or otherwise not fit for service. This distinguishes it from a consumable, which is considered to be 'used' after one or a small number of uses (the latter situation should be understood as 'one use').</p>
-</div>
-<div class="paragraph">
-<p>Some consumable items e.g. nasal drip tubes can be physically 'used' more than once with the same patient for a short period of time, but are replaced for different patients and also over longer periods; typically considered consumable.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_independent_object_class">Independent_object</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>function</strong>: <code>@@</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Purpose of the artefact.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_substance_class"><a class="anchor" href="#_substance_class"></a>4.4.13. Substance Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Substance</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Portion of undifferentiated  material of any kind, including pure elemental materials (e.g. oxygen), compounds, complex molecular substances (e.g. albumin), admixtures, medicines etc.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_independent_object_class">Independent_object</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_material_location_class"><a class="anchor" href="#_material_location_class"></a>4.4.14. Material_location Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Material_location (abstract)</em></strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Equivalent of BFO:Continuant fiat boundary, except classified under materially-dependent entity.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_materially_dependent_entity_class">Materially_dependent_entity</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_fiat_point_class"><a class="anchor" href="#_fiat_point_class"></a>4.4.15. Fiat_point Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Fiat_point</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Equivalent to `BFO: 0-D Continuant fiat boundary'.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_material_location_class">Material_location</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_fiat_line_class"><a class="anchor" href="#_fiat_line_class"></a>4.4.16. Fiat_line Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Fiat_line</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>A closed linear boundary.</p>
-</div>
-<div class="paragraph">
-<p>Equivalent to `BFO: 1-D Continuant fiat boundary'.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_material_location_class">Material_location</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_fiat_surface_class"><a class="anchor" href="#_fiat_surface_class"></a>4.4.17. Fiat_surface Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Fiat_surface</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>A closed volume boundary.</p>
-</div>
-<div class="paragraph">
-<p>Equivalent to `BFO: 2-D Continuant fiat boundary'.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_material_location_class">Material_location</a></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_instance_examples"><a class="anchor" href="#_instance_examples"></a>4.5. Instance Examples</h3>
-<div class="paragraph">
-<p>xxx.</p>
-</div>
-<div class="sect3">
-<h4 id="_biological_entities_2"><a class="anchor" href="#_biological_entities_2"></a>4.5.1. Biological Entities</h4>
-<div class="sect4">
-<h5 id="_tissue_sample"><a class="anchor" href="#_tissue_sample"></a>4.5.1.1. Tissue Sample</h5>
-<div class="paragraph">
-<p>xxx.</p>
-</div>
-<div id="tissue_sample" class="imageblock text-center text-center">
-<div class="content">
-<img src="entity/diagrams/tissue_sample.png" alt="tissue sample">
-</div>
-<div class="title">Figure 4. Biological Entity</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_artefacts_2"><a class="anchor" href="#_artefacts_2"></a>4.5.2. Artefacts</h4>
-<div class="sect4">
-<h5 id="_ultrasound_machine"><a class="anchor" href="#_ultrasound_machine"></a>4.5.2.1. Ultrasound Machine</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_cardiac_pacemaker"><a class="anchor" href="#_cardiac_pacemaker"></a>4.5.2.2. Cardiac Pacemaker</h5>
-
-</div>
-</div>
-<div class="sect3">
-<h4 id="_substances_2"><a class="anchor" href="#_substances_2"></a>4.5.3. Substances</h4>
-<div class="sect4">
-<h5 id="_medication"><a class="anchor" href="#_medication"></a>4.5.3.1. Medication</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_food"><a class="anchor" href="#_food"></a>4.5.3.2. Food</h5>
-
-</div>
-</div>
-<div class="sect3">
-<h4 id="_aggregate_objects"><a class="anchor" href="#_aggregate_objects"></a>4.5.4. Aggregate objects</h4>
 <div class="paragraph">
 <p>xxx</p>
 </div>
@@ -1484,7 +846,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/ENTITY/{entity_release}/entity.html#_entity_class" target="_blank" rel="noopener">Entity</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_entity_class">Entity</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -1493,7 +855,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_material_bearer</strong>: <code><a href="/releases/ENTITY/{entity_release}/physical_entity.html#_physical_entity_class" target="_blank" rel="noopener">Physical_entity</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_material_bearer</strong>: <code><a href="#_physical_entity_class">Physical_entity</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
@@ -1517,7 +879,7 @@
 <div class="content">
 <img src="UML/diagrams/ENTITY-social_entity.party.svg" alt="ENTITY social entity.party">
 </div>
-<div class="title">Figure 5. rm.entity.social_entity.party package</div>
+<div class="title">Figure 4. rm.entity.social_entity.party package</div>
 </div>
 <div class="paragraph">
 <p>Parties may generally have identities (i.e. names of various kinds), contact information, legal status and relationships, with the specific kinds of these  being dependent upon the kind of Party.</p>
@@ -1607,19 +969,16 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>contacts</strong>: <code>List&lt;<a href="#_contact_class">Contact</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>comms_addresses</strong>: <code>List&lt;<a href="#_comms_address_use_class">Comms_address_use</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Contacts for this party.</p>
 </div></div></td>
 </tr>
 <tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>legal_status</strong>: <code>@@</code></p></td>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identifiers</strong>: <code>List&lt;<a href="#_id_use_class">Id_use</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Legal status of this entity, potentially supported by documentation (references).</p>
-</div>
-<div class="paragraph">
-<p>TODO: detail</p>
+<p>Real world identifiers such as SSN, drivers license, tax number, passport number etc.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1640,6 +999,13 @@
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_services</strong>: <code>List&lt;<a href="#_service_class">Service</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>location_addresses</strong>: <code>List&lt;<a href="#_location_address_use_class">Location_address_use</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A set of address alternatives for this contact purpose and time validity combination.</p>
+</div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Invariants</strong></p></th>
@@ -1713,13 +1079,6 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>languages</strong>: <code>List&lt;<a href="/releases/BASE/latest/foundation_types.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Languages which can be used to communicate with this actor, in preferred order of use (if known, else order irrelevant).</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>personas</strong>: <code>List&lt;<a href="#_persona_class">Persona</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Personas of an Agent based on Capabilities. A Persona corresponds to the potential to act in a specific capability-based way, i.e. to have a competency or ability.</p>
@@ -1727,6 +1086,11 @@
 <div class="paragraph">
 <p>For example, the Person Margaret Smith may have a Persona based on her GP (medical) credentials, and another based on her amateur opera singing Capability. She could therefore work as a GP in a health practice and also as a singer in a drama society.</p>
 </div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>languages</strong>: <code>List&lt;<a href="#_language_capability_class">Language_capability</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
 </table>
@@ -1796,7 +1160,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base_types.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -1804,10 +1168,27 @@
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
 </tr>
 <tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/patterns.html#_item_class" target="_blank" rel="noopener">Item</a>&gt;</code></p></td>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identity_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The value of the identity. This will usually take the form of a small structure of strings.</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>use</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>simple_name</strong>: <code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Single string form of name.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1817,7 +1198,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>purpose</strong> (): <code><a href="/releases/BASE/latest/foundation_types.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>purpose</strong> (): <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Purpose of identity, e.g. legal ,  stage name,  nickname,  tribal name,  trading name. Taken from value of inherited <code><em>name</em></code> attribute.</p>
 </div></div></td>
@@ -1832,7 +1213,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_contact_class"><a class="anchor" href="#_contact_class"></a>6.4.5. Contact Class</h4>
+<h4 id="_address_use_class"><a class="anchor" href="#_address_use_class"></a>6.4.5. Address_use Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -1842,17 +1223,15 @@
 <tbody>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Contact</strong></p></th>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Address_use (abstract)</em></strong></p></th>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Description of a means of contact of a Party. Actual structure is archetyped.</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top" colspan="2"><div class="content"></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base_types.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -1860,42 +1239,31 @@
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
 </tr>
 <tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>addresses</strong>: <code>List&lt;<a href="#_address_class">Address</a>&gt;</code></p></td>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>address_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A set of address alternatives for this contact purpose and time validity combination.</p>
+<p>Type of address, coded. Typical values: email, sms, pager, phone, messaging.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>time_validity</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_interval_class">Interval<sup></a>&lt;<a href="/releases/BASE/latest/foundation_types.html#_date_class">Date</sup></a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>purposes</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Valid time interval for this contact descriptor.</p>
+<p>Purposes for which this address may be used. Typical values include work, home, receiving goods etc.</p>
 </div></div></td>
 </tr>
 <tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Functions</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>purpose</strong> (): <code><a href="/releases/BASE/latest/foundation_types.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>time_validity</strong>: <code><a href="/releases/BASE/latest/base.html#_timing_class" target="_blank" rel="noopener">Timing</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Purpose for which this contact is used, e.g. mail,  daytime phone, etc. Taken from value of inherited <code><em>name</em></code> attribute.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Invariants</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p><em>Purpose_valid</em>: <code>purpose = name</code></p>
+<p>Valid times for this contact..</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_address_class"><a class="anchor" href="#_address_class"></a>6.4.6. Address Class</h4>
+<h4 id="_location_address_use_class"><a class="anchor" href="#_location_address_use_class"></a>6.4.6. Location_address_use Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -1905,7 +1273,7 @@
 <tbody>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Address</strong></p></th>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Location_address_use</strong></p></th>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
@@ -1915,7 +1283,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base_types.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_address_use_class">Address_use</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -1923,8 +1291,8 @@
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
 </tr>
 <tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/patterns.html#_item_class" target="_blank" rel="noopener">Item</a>&gt;</code></p></td>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Archetypable structured address.</p>
 </div></div></td>
@@ -1936,7 +1304,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type</strong> (): <code><a href="/releases/BASE/latest/foundation_types.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type</strong> (): <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Type of address, e.g. electronic, locality. Taken from value of inherited <code><em>name</em></code> attribute.</p>
 </div></div></td>
@@ -1951,7 +1319,70 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_capability_class"><a class="anchor" href="#_capability_class"></a>6.4.7. Capability Class</h4>
+<h4 id="_comms_address_use_class"><a class="anchor" href="#_comms_address_use_class"></a>6.4.7. Comms_address_use Class</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 33.3333%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Comms_address_use</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
+<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
+<p>Means of communicating with a Party.</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_address_use_class">Address_use</a></code></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>address</strong>: <code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Individual address, including email, phone,</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>address_platform</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Where relevant, e,g, for <code>address_type = messaging</code>, a platform such as 'whatsapp' may be specified.</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Functions</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>purpose</strong> (): <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Purpose for which this contact is used, e.g. mail,  daytime phone, etc. Taken from value of inherited <code><em>name</em></code> attribute.</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Invariants</strong></p></th>
+<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
+<p><em>Purpose_valid</em>: <code>purpose = name</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_capability_class"><a class="anchor" href="#_capability_class"></a>6.4.8. Capability Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -1966,12 +1397,12 @@
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
 <td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Capability of an Agent, such as  GP, vascular surgeon. Capability is based on credentials, normally professional certifications.</p>
+<p>Capability of an Agent Persona, such as  GP, vascular surgeon. Capability is based on credentials, normally professional certifications.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base_types.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -1980,14 +1411,19 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>credentials</strong>: <code>List&lt;<a href="/releases/BASE/latest/patterns.html#_item_class" target="_blank" rel="noopener">Item</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code><a href="/releases/BASE/latest/base.html#_text_class" target="_blank" rel="noopener">Text</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>credentials</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The qualifications of the performer of the role for this capability. This might include professional qualifications and official identifications such as provider numbers etc.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>time_validity</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_interval_class">Interval<sup></a>&lt;<a href="/releases/BASE/latest/foundation_types.html#_date_class">Date</sup></a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>time_validity</strong>: <code><a href="/releases/BASE/latest/base.html#_interval_class">Interval<sup></a>&lt;<a href="/releases/BASE/latest/base.html#_date_class">Date</sup></a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Valid time interval for the credentials of this capability.</p>
 </div></div></td>
@@ -1996,7 +1432,44 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_aggregate_agent_class"><a class="anchor" href="#_aggregate_agent_class"></a>6.4.8. Aggregate_agent Class</h4>
+<h4 id="_language_capability_class"><a class="anchor" href="#_language_capability_class"></a>6.4.9. Language_capability Class</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 33.3333%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Language_capability</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
+<td class="tableblock halign-left valign-top" colspan="2"><div class="content"></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>language</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Languages which can be used to communicate with this actor, in preferred order of use (if known, else order irrelevant).</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>preferred</strong>: <code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_aggregate_agent_class"><a class="anchor" href="#_aggregate_agent_class"></a>6.4.10. Aggregate_agent Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2032,14 +1505,14 @@
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_members</strong>: <code>List&lt;<a href="#_individual_agent_class">Individual_agent</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Simple list of members, if not represented by <code>PARTY.relationships</code>.</p>
+<p>Pseudo-relationship representing individual members. Concretely represented using <code>relationship_group</code> with name 'r_members'.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_org_entity_class"><a class="anchor" href="#_org_entity_class"></a>6.4.9. Org_entity Class</h4>
+<h4 id="_org_entity_class"><a class="anchor" href="#_org_entity_class"></a>6.4.11. Org_entity Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2073,14 +1546,14 @@
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>r_parts</strong>: <code>List&lt;<a href="#_org_unit_class">Org_unit</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Organisational sub-parts.</p>
+<p>Pseudo-relationship representing organisational sub-parts. Concretely represented using <code>relationship_group</code> with name 'r_parts'.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_org_unit_class"><a class="anchor" href="#_org_unit_class"></a>6.4.10. Org_unit Class</h4>
+<h4 id="_org_unit_class"><a class="anchor" href="#_org_unit_class"></a>6.4.12. Org_unit Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2109,7 +1582,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_organisation_class"><a class="anchor" href="#_organisation_class"></a>6.4.11. Organisation Class</h4>
+<h4 id="_organization_class"><a class="anchor" href="#_organization_class"></a>6.4.13. Organization Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2119,7 +1592,7 @@
 <tbody>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Organisation</strong></p></th>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Organization</strong></p></th>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
@@ -2141,7 +1614,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_individual_agent_class"><a class="anchor" href="#_individual_agent_class"></a>6.4.12. Individual_agent Class</h4>
+<h4 id="_individual_agent_class"><a class="anchor" href="#_individual_agent_class"></a>6.4.14. Individual_agent Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2167,7 +1640,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_automaton_class"><a class="anchor" href="#_automaton_class"></a>6.4.13. Automaton Class</h4>
+<h4 id="_automaton_class"><a class="anchor" href="#_automaton_class"></a>6.4.15. Automaton Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2193,7 +1666,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_person_class"><a class="anchor" href="#_person_class"></a>6.4.14. Person Class</h4>
+<h4 id="_person_class"><a class="anchor" href="#_person_class"></a>6.4.16. Person Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2219,7 +1692,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_party_relationship_class"><a class="anchor" href="#_party_relationship_class"></a>6.4.15. Party_relationship Class</h4>
+<h4 id="_party_relationship_class"><a class="anchor" href="#_party_relationship_class"></a>6.4.17. Party_relationship Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2239,7 +1712,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/ENTITY/{entity_release}/entity.html#_entity_relationship_class" target="_blank" rel="noopener">Entity_relationship</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_entity_relationship_class">Entity_relationship</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -2256,7 +1729,7 @@
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1<br>
 (redefined)</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>source</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_string_class" target="_blank" rel="noopener">String</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>source</strong>: <code><a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Source of relationship, may be understood as 'owner' of relationship.</p>
 </div></div></td>
@@ -2264,7 +1737,7 @@
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1<br>
 (redefined)</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>target</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_string_class" target="_blank" rel="noopener">String</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>target</strong>: <code><a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Target of relationship.</p>
 </div></div></td>
@@ -2290,9 +1763,49 @@
 </tbody>
 </table>
 </div>
+<div class="sect3">
+<h4 id="_id_use_class"><a class="anchor" href="#_id_use_class"></a>6.4.18. Id_use Class</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 33.3333%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Id_use</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
+<td class="tableblock halign-left valign-top" colspan="2"><div class="content"></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>tag</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>original_id</strong>: <code><a href="/releases/BASE/latest/base.html#_rwe_id_ref_class" target="_blank" rel="noopener">Rwe_id_ref</a></code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_instance_examples_2"><a class="anchor" href="#_instance_examples_2"></a>6.5. Instance Examples</h3>
+<h3 id="_instance_examples"><a class="anchor" href="#_instance_examples"></a>6.5. Instance Examples</h3>
 <div class="paragraph">
 <p>In the following instance examples, the values of the attributes uid, source, target, and reverse_relationships are not meant to be taken as literally valid <code>OBJECT_IDs</code> - for the purposes of clarity, simple integers have been used.</p>
 </div>
@@ -2356,7 +1869,7 @@ care organisation.</p>
 <div class="content">
 <img src="UML/diagrams/ENTITY-social_entity.asset.svg" alt="ENTITY social entity.asset">
 </div>
-<div class="title">Figure 6. rm.entity.social_entity.asset package</div>
+<div class="title">Figure 5. rm.entity.social_entity.asset package</div>
 </div>
 </div>
 <div class="sect2">
@@ -2475,7 +1988,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>addresses</strong>: <code>List&lt;<a href="#_address_class">Address</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>addresses</strong>: <code>List&lt;<a href="#_location_address_use_class">Location_address_use</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Addresses of a Place within one or more address spaces.</p>
 </div></div></td>
@@ -2514,7 +2027,7 @@ care organisation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_semantics_3"><a class="anchor" href="#_semantics_3"></a>7.3. Semantics</h3>
+<h3 id="_semantics"><a class="anchor" href="#_semantics"></a>7.3. Semantics</h3>
 <div class="sect3">
 <h4 id="_service"><a class="anchor" href="#_service"></a>7.3.1. Service</h4>
 <div class="paragraph">
@@ -2523,7 +2036,7 @@ care organisation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_instance_examples_3"><a class="anchor" href="#_instance_examples_3"></a>7.4. Instance Examples</h3>
+<h3 id="_instance_examples_2"><a class="anchor" href="#_instance_examples_2"></a>7.4. Instance Examples</h3>
 <div class="paragraph">
 <p>xxx.</p>
 </div>
@@ -2569,7 +2082,7 @@ care organisation.</p>
 <div class="content">
 <img src="UML/diagrams/ENTITY-resource.svg" alt="ENTITY resource">
 </div>
-<div class="title">Figure 7. rm.entity.resource package</div>
+<div class="title">Figure 6. rm.entity.resource package</div>
 </div>
 </div>
 <div class="sect2">
@@ -2595,7 +2108,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base_types.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -2604,35 +2117,35 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>start_time</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_date_time_class" target="_blank" rel="noopener">Date_time</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>start_time</strong>: <code><a href="/releases/BASE/latest/base.html#_date_time_class" target="_blank" rel="noopener">Date_time</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Time at which resource use commenced.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>duration</strong>: <code><a href="/releases/BASE/latest/foundation_types.html#_duration_class" target="_blank" rel="noopener">Duration</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>duration</strong>: <code><a href="/releases/BASE/latest/base.html#_duration_class" target="_blank" rel="noopener">Duration</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Duration of resource use.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cost_data</strong>: <code>@@</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cost_data</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Cost data for this resource use.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>@@</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Detailed description of this resource utilisation.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>resource</strong>: <code>List&lt;<a href="/releases/ENTITY/{entity_release}/entity.html#_entity_class" target="_blank" rel="noopener">Entity</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>resource</strong>: <code>List&lt;<a href="#_entity_class">Entity</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
@@ -2697,7 +2210,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>amount</strong>: <code>@@</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>amount</strong>: <code><a href="/releases/BASE/latest/base.html#_decimal_class" target="_blank" rel="noopener">Decimal</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Amount of resource consumed.</p>
 </div></div></td>
@@ -2707,12 +2220,12 @@ care organisation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_instance_examples_4"><a class="anchor" href="#_instance_examples_4"></a>8.3. Instance Examples</h3>
+<h3 id="_instance_examples_3"><a class="anchor" href="#_instance_examples_3"></a>8.3. Instance Examples</h3>
 <div class="paragraph">
 <p>xxx.</p>
 </div>
 <div class="sect3">
-<h4 id="_biological_entities_3"><a class="anchor" href="#_biological_entities_3"></a>8.3.1. Biological Entities</h4>
+<h4 id="_biological_entities"><a class="anchor" href="#_biological_entities"></a>8.3.1. Biological Entities</h4>
 <div class="sect4">
 <h5 id="_xxx"><a class="anchor" href="#_xxx"></a>8.3.1.1. XXX</h5>
 <div class="paragraph">
@@ -2721,19 +2234,19 @@ care organisation.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_artefacts_3"><a class="anchor" href="#_artefacts_3"></a>8.3.2. Artefacts</h4>
+<h4 id="_artefacts"><a class="anchor" href="#_artefacts"></a>8.3.2. Artefacts</h4>
 <div class="paragraph">
 <p>xxx</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_substances_3"><a class="anchor" href="#_substances_3"></a>8.3.3. Substances</h4>
+<h4 id="_substances"><a class="anchor" href="#_substances"></a>8.3.3. Substances</h4>
 <div class="paragraph">
 <p>xxx</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_aggregate_objects_2"><a class="anchor" href="#_aggregate_objects_2"></a>8.3.4. Aggregate objects</h4>
+<h4 id="_aggregate_objects"><a class="anchor" href="#_aggregate_objects"></a>8.3.4. Aggregate objects</h4>
 <div class="paragraph">
 <p>xxx</p>
 </div>
@@ -2753,7 +2266,7 @@ care organisation.</p>
 <div class="content">
 <img src="UML/diagrams/ENTITY-registry.svg" alt="ENTITY registry">
 </div>
-<div class="title">Figure 8. rm.entity.registry package</div>
+<div class="title">Figure 7. rm.entity.registry package</div>
 </div>
 </div>
 <div class="sect2">
@@ -2784,40 +2297,40 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>entities</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base_types.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_entity_class">Versioned_entity</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>entities</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_entity_class">Versioned_entity</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>facilities</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base_types.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_facility_class">Versioned_facility</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>facilities</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_facility_class">Versioned_facility</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Collection of material entities, i.e. 'things'.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>assets</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base_types.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_asset_class">Versioned_asset</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>assets</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_asset_class">Versioned_asset</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Collection of assets, i.e. owned entities.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>parties</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base_types.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_party_class">Versioned_party</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>parties</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_party_class">Versioned_party</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Collection of parties.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>resources</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base_types.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_resource_item_class">Versioned_resource_item</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>resources</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_resource_item_class">Versioned_resource_item</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Collection of resources.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>resource_uses</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base_types.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_resource_use_class">Versioned_resource_use</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>resource_uses</strong>: <code>Hash&lt;<a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>,<a href="#_versioned_resource_use_class">Versioned_resource_use</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Collection of assets, i.e. owned entities.</p>
 </div></div></td>
@@ -2846,7 +2359,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/change_control.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2872,7 +2385,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/change_control.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2898,7 +2411,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/change_control.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2924,7 +2437,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/change_control.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2950,7 +2463,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/change_control.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2976,7 +2489,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/change_control.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_versioned_object_class" target="_blank" rel="noopener">Versioned_object</a></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2993,7 +2506,7 @@ care organisation.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-10-04 21:17:27 -0600
+Last updated 2024-09-18 17:27:38 -0600
 </div>
 </div>
 </body>

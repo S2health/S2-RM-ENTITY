@@ -1,0 +1,29 @@
+=== Agent Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__Agent (abstract)__*
+
+h|*Description*
+2+a|An _intentional_ real-world agent, equivalent to a mind, either individual or aggregate. An Agent may have one or more Personae, each of which is characterised by one or more Capabilities.
+
+Possibly equivalent to `BFO:Role`.
+
+h|*Inherit*
+2+|`<<_party_class,Party>>`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*personas*: `List<<<_persona_class,Persona>>>`
+a|Personas of an Agent based on Capabilities. A Persona corresponds to the potential to act in a specific capability-based way, i.e. to have a competency or ability.
+
+For example, the Person Margaret Smith may have a Persona based on her GP (medical) credentials, and another based on her amateur opera singing Capability. She could therefore work as a GP in a health practice and also as a singer in a drama society.
+
+h|*0..1*
+|*languages*: `List<<<_language_capability_class,Language_capability>>>`
+a|
+|===

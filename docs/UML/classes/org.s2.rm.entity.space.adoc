@@ -1,0 +1,26 @@
+=== Space Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*Space*
+
+h|*Description*
+2+a|A three-dimensional Materially-dependent entity that is partially or wholly bounded by a Material Entity. Examples: naturally and partially fiat-defined cavities, holes and spaces.
+
+Descendant types provide examples.
+
+Similar to `BFO:Site`.
+
+h|*Inherit*
+2+|`<<_object_extension_kind_class,Object_extension_kind>>`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1 +
+(redefined)*
+|*parts*: `List<<<_space_class,Space>>>`
+a|Material part-of relation, refined for Space entities, which can only be composed of other Spaces, possibly delineated by Fiat_surfaces.
+|===
