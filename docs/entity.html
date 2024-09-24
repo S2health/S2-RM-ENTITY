@@ -912,7 +912,7 @@
 <p>Classes have been included for <code>Party_identity</code> and <code>Address</code>, even though they contain only a link to details, in the form of the generic <code>Cluster</code> class. This is not strictly necessary - it could have been done simply using appropriately named attributes in the classes <code>Party</code> and <code>Contact</code> - but is done to provide a place to add specific semantics in future releases of the model. It is also expected to make software development easier, since it provides explicit classes to which behaviour and other implementation attributes can be added. Lastly, it allows the notions of <code>Party_identity</code> and <code>Address</code> to be explicitly used in archetype-authoring tools.</p>
 </div>
 <div class="paragraph">
-<p>Instances of <code>Party_identity</code>, linked to <code>Party</code> by the attribute <code><em>identities</em></code> are intended to express the names of people, organisations, and other actors - that is names which are "owned" by the party, e.g.  self-declared (in the case of institutions and companies) or by virtue of social relations (names given by parents, tribes etc). Identifiers of Parties given by other organisations, or the state are not represented in this way, and should be recorded in the <code>PARTY.<em>details</em></code> structure instead (see below).</p>
+<p>Instances of <code>Party_identity</code>, linked to <code>Party</code> by the attribute <code><em>identities</em></code> are intended to express the names of people, organisations, and other actors - that is names which are "owned" by the party, e.g.  self-declared (in the case of institutions and companies) or by virtue of social relations (names given by parents, tribes etc). Identifiers of Parties given by other organisations, or the state are not represented in this way, and should be recorded in the <code>Party.<em>details</em></code> structure instead (see below).</p>
 </div>
 </div>
 <div class="sect2">
@@ -1823,7 +1823,7 @@
 <div class="sect4">
 <h5 id="_person"><a class="anchor" href="#_person"></a>6.5.1.1. Person</h5>
 <div class="paragraph">
-<p>The diagram below illustrates a possible set of instances for a <code>PERSON</code>, with home and work contact information.  There are separate archetypes for the <code>PERSON</code>, each <code>Address</code>, and each <code>Party_identity</code>. In the following figure, "meaning" is the meaning from the value of the archetype_node_id attribute, functionally derived from the archetype local ontology.</p>
+<p>The diagram below illustrates a possible set of instances for a <code>Person</code>, with home and work contact information.  There are separate archetypes for the <code>Person</code>, each <code>Address</code>, and each <code>Party_identity</code>. In the following figure, "meaning" is the meaning from the value of the archetype_node_id attribute, functionally derived from the archetype local ontology.</p>
 </div>
 </div>
 <div class="sect4">
@@ -1841,7 +1841,7 @@
 <div class="sect4">
 <h5 id="_group"><a class="anchor" href="#_group"></a>6.5.1.5. Group</h5>
 <div class="paragraph">
-<p>The figure below illustrates the demographic information for a cadiac surgery team in a hospital. The group includes a head surgeon, anaesthetist, assistant surgeon, and presumably others (not shown). Each of these members of the team have an employment relationship with the hospital (shown only for one surgeon, in the interests of clarity).</p>
+<p>The figure below illustrates the demographic information for a cardiac surgery team in a hospital. The group includes a head surgeon, anaesthetist, assistant surgeon, and presumably others (not shown). Each of these members of the team have an employment relationship with the hospital (shown only for one surgeon, in the interests of clarity).</p>
 </div>
 </div>
 </div>
