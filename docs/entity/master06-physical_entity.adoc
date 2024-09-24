@@ -1,0 +1,17 @@
+= Physical Entities
+
+== Overview
+
+The Physical entity package defines the model of individuals that are real world instances of Continuant kinds described earlier.
+
+The following UML diagram illustrates the `physical_entity` package.
+
+[.text-center]
+.rm.entity.physical_entity package
+image::{uml_diagrams_uri}/ENTITY-physical_entity.svg[id=entity_physical_entity, align="center"]
+
+== Class Definitions
+
+include::{uml_export_dir}/classes/{pkg}physical_entity.adoc[]
+
+include::{uml_export_dir}/classes/{pkg}material_entity.adoc[]

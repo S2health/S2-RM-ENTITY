@@ -17,5 +17,5 @@ h|*Attributes*
 
 h|*1..1*
 |*r_material_bearer*: `<<_physical_entity_class,Physical_entity>>`
-a|
+a|The material entity in which this social entity inheres. Not necessarily implemented or populated.
 |===

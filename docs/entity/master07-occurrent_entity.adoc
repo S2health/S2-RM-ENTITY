@@ -1,0 +1,15 @@
+= Occurrent Entities
+
+== Overview
+
+The Occurrent entity package defines the model of individuals that are real world instances of Occurrent kinds described earlier.
+
+The following UML diagram illustrates the `occurrent_entity` package.
+
+[.text-center]
+.rm.entity.occurrent_entity package
+image::{uml_diagrams_uri}/ENTITY-occurrent_entity.svg[id=entity_occurrent_entity, align="center"]
+
+== Class Definitions
+
+include::{uml_export_dir}/classes/{pkg}process.adoc[]
