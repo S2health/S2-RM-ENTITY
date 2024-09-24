@@ -6,11 +6,11 @@ h|*Class*
 2+^h|*Service*
 
 h|*Description*
-2+a|A business level service provided by a Party.
+2+a|A type of business level service provided by a Party.
 
 TBD: detail.
 
 h|*Inherit*
-2+|`<<_social_entity_class,Social_entity>>`
+2+|`<<_process_kind_class,Process_kind>>`
 
 |===
