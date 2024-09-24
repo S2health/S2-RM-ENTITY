@@ -1,4 +1,4 @@
-= Party Package
+= Social Entities: Parties
 
 == Overview
 
@@ -18,13 +18,14 @@ Contact information is typically associated both with Agents - corresponding to 
 
 Party relationships are how real-world relationships between Parties are represented, including employment, contractual, membership, and other social relationships. Many of these will be based on an Accountability, which describes the responsibility of one Party to another in the relationship.
 
-== Party Identities and Contacts
+== Party Identity
 
-Parties are characterised by identity,
+Instances of `Party_identity`, linked to `Party` by the attribute `_identities_` are intended to express the names of people, organisations, and other actors - that is names which are real world attributes of the party, e.g.  self-declared (in the case of institutions and companies) or by virtue of social relations (names given by parents, tribes etc). Identifiers of Parties given by other organisations, or the state are not represented in this way, and should be recorded in the `Party._details_` structure instead (see below).
 
-Classes have been included for `Party_identity` and `Address`, even though they contain only a link to details, in the form of the generic `Cluster` class. This is not strictly necessary - it could have been done simply using appropriately named attributes in the classes `Party` and `Contact` - but is done to provide a place to add specific semantics in future releases of the model. It is also expected to make software development easier, since it provides explicit classes to which behaviour and other implementation attributes can be added. Lastly, it allows the notions of `Party_identity` and `Address` to be explicitly used in archetype-authoring tools.
+== Contact Information
 
-Instances of `Party_identity`, linked to `Party` by the attribute `_identities_` are intended to express the names of people, organisations, and other actors - that is names which are "owned" by the party, e.g.  self-declared (in the case of institutions and companies) or by virtue of social relations (names given by parents, tribes etc). Identifiers of Parties given by other organisations, or the state are not represented in this way, and should be recorded in the `Party._details_` structure instead (see below).
+[.tbd]
+TBD
 
 == Party Relationships and Accountability
 

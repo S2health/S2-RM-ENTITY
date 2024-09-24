@@ -1,4 +1,4 @@
-= Resource Package
+= Resources
 
 == Overview
 

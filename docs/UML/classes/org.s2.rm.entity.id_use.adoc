@@ -6,7 +6,7 @@ h|*Class*
 2+^h|*Id_use*
 
 h|*Description*
-2+a|
+2+a|An identifier with associated use meta-data.
 
 h|*Attributes*
 ^h|*Signature*
@@ -14,13 +14,13 @@ h|*Attributes*
 
 h|*0..1*
 |*tag*: `link:/releases/BASE/{base_release}/base.html#_terminology_term_class[Terminology_term^]`
-a|
+a|Human readable tag, e.g. 'SSN', 'drivers license', used for display and search.
 
 h|*1..1*
 |*original_id*: `link:/releases/BASE/{base_release}/base.html#_rwe_id_ref_class[Rwe_id_ref^]`
-a|
+a|The used identifier.
 
 h|*0..1*
 |*description*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
-a|
+a|Meta-data relating to use,
 |===

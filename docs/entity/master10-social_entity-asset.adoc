@@ -1,4 +1,4 @@
-= Asset Package
+= Social Entities: Assets
 
 == Overview
 
@@ -18,8 +18,6 @@ include::{uml_export_dir}/classes/{pkg}equipment.adoc[]
 include::{uml_export_dir}/classes/{pkg}consumable.adoc[]
 
 include::{uml_export_dir}/classes/{pkg}property.adoc[]
-
-include::{uml_export_dir}/classes/{pkg}service.adoc[]
 
 == Semantics
 
