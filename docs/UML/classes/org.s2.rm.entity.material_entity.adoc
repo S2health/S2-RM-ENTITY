@@ -32,6 +32,6 @@ h|*0..1*
 a|Details relating to use, location, maintenance.
 
 h|*0..1*
-|*other_identifiers*: `List<<<_id_use_class,Id_use>>>`
+|*other_identifiers*: `List<link:/releases/BASE/{base_release}/base.html#_id_use_class[Id_use^]>`
 a|Other identifiers as required.
 |===

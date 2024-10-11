@@ -11,4 +11,11 @@ h|*Description*
 h|*Inherit*
 2+|`<<_independent_object_kind_class,Independent_object_kind>>`
 
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*0..1*
+|*ingredients*: `List<<<_substance_kind_class,Substance_kind>>>`
+a|Constituent substances
 |===

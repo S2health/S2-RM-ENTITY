@@ -22,15 +22,15 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*identities*: `List<<<_party_identity_class,Party_identity>>>`
+|*identities*: `List<link:/releases/BASE/{base_release}/base.html#_party_identity_class[Party_identity^]>`
 a|Identities used by the Party to identify itself. Most commonly, Agents will have identity/ies (at least legal name), but occasionally, a Persona will have identities as well, e.g. stage names, aliases, nicknames.
 
 h|*0..1*
-|*comms_addresses*: `List<<<_comms_address_use_class,Comms_address_use>>>`
+|*comms_addresses*: `List<link:/releases/BASE/{base_release}/base.html#_comms_address_use_class[Comms_address_use^]>`
 a|Contacts for this party.
 
 h|*0..1*
-|*identifiers*: `List<<<_id_use_class,Id_use>>>`
+|*identifiers*: `List<link:/releases/BASE/{base_release}/base.html#_id_use_class[Id_use^]>`
 a|Real world identifiers such as SSN, drivers license, tax number, passport number etc.
 
 h|*0..1*
@@ -46,7 +46,7 @@ h|*0..1*
 a|
 
 h|*0..1*
-|*location_addresses*: `List<<<_location_address_use_class,Location_address_use>>>`
+|*location_addresses*: `List<link:/releases/BASE/{base_release}/base.html#_location_address_use_class[Location_address_use^]>`
 a|A set of address alternatives for this contact purpose and time validity combination.
 
 h|*Invariants*
