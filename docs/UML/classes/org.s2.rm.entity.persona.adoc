@@ -20,6 +20,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*capabilities*: `List<<<_capability_class,Capability>>>`
+|*capabilities*: `List<link:/releases/BASE/{base_release}/base.html#_capability_class[Capability^]>`
 a|Capabilities of this Persona.
 |===

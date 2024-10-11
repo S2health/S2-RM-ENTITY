@@ -175,21 +175,14 @@
 <li><a href="#_party_class">9.5.1. Party Class</a></li>
 <li><a href="#_agent_class">9.5.2. Agent Class</a></li>
 <li><a href="#_persona_class">9.5.3. Persona Class</a></li>
-<li><a href="#_party_identity_class">9.5.4. Party_identity Class</a></li>
-<li><a href="#_address_use_class">9.5.5. Address_use Class</a></li>
-<li><a href="#_location_address_use_class">9.5.6. Location_address_use Class</a></li>
-<li><a href="#_comms_address_use_class">9.5.7. Comms_address_use Class</a></li>
-<li><a href="#_capability_class">9.5.8. Capability Class</a></li>
-<li><a href="#_language_capability_class">9.5.9. Language_capability Class</a></li>
-<li><a href="#_aggregate_agent_class">9.5.10. Aggregate_agent Class</a></li>
-<li><a href="#_org_entity_class">9.5.11. Org_entity Class</a></li>
-<li><a href="#_org_unit_class">9.5.12. Org_unit Class</a></li>
-<li><a href="#_organization_class">9.5.13. Organization Class</a></li>
-<li><a href="#_individual_agent_class">9.5.14. Individual_agent Class</a></li>
-<li><a href="#_automaton_class">9.5.15. Automaton Class</a></li>
-<li><a href="#_person_class">9.5.16. Person Class</a></li>
-<li><a href="#_party_relationship_class">9.5.17. Party_relationship Class</a></li>
-<li><a href="#_id_use_class">9.5.18. Id_use Class</a></li>
+<li><a href="#_aggregate_agent_class">9.5.4. Aggregate_agent Class</a></li>
+<li><a href="#_org_entity_class">9.5.5. Org_entity Class</a></li>
+<li><a href="#_org_unit_class">9.5.6. Org_unit Class</a></li>
+<li><a href="#_organization_class">9.5.7. Organization Class</a></li>
+<li><a href="#_individual_agent_class">9.5.8. Individual_agent Class</a></li>
+<li><a href="#_automaton_class">9.5.9. Automaton Class</a></li>
+<li><a href="#_person_class">9.5.10. Person Class</a></li>
+<li><a href="#_party_relationship_class">9.5.11. Party_relationship Class</a></li>
 </ul>
 </li>
 <li><a href="#_instance_examples_2">9.6. Instance Examples</a>
@@ -311,7 +304,7 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Release</strong>: ENTITY Release-0.8.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Release</strong>: ENTITY Release-0.8.6</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong>: DEVELOPMENT</p></td>
 </tr>
 <tr>
@@ -370,16 +363,25 @@
 </thead>
 <tbody>
 <tr>
+<th class="tableblock halign-center valign-top" colspan="4"><p class="tableblock"><strong>BASE Release 0.8.6</strong></p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue"></a>0.8.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://specifications.s2health.org/tickets/S2ENTITY-9" target="_blank" rel="noopener">S2ENTITY-9</a>: Move Party subordinate classes to BASE as subtypes of Info_node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T Beale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue_date"></a>07 Oct 2024</p></td>
+</tr>
+<tr>
 <th class="tableblock halign-center valign-top" colspan="4"><p class="tableblock"><strong>BASE Release 0.8.5</strong></p></th>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue"></a>0.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.8.5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://specifications.s2health.org/tickets/S2ENTITY-3" target="_blank" rel="noopener">S2ENTITY-3</a>: Improve Party details, including addresses, identity;<br>
  <a href="https://specifications.s2health.org/tickets/S2ENTITY-6" target="_blank" rel="noopener">S2ENTITY-6</a>: Create Entity_kind hierarchy, and convert Physical entity hierarchy to xxx_kind;<br>
  <a href="https://specifications.s2health.org/tickets/S2ENTITY-7" target="_blank" rel="noopener">S2ENTITY-7</a>: Add new physical entity hierarchy to represent individuals;<br>
  <a href="https://specifications.s2health.org/tickets/S2ENTITY-8" target="_blank" rel="noopener">S2ENTITY-8</a>: Add support for occurrents, including processes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">T Beale</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue_date"></a>15 Oct 2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15 Oct 2022</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0.3.0</p></td>
@@ -1340,6 +1342,18 @@
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_independent_object_kind_class">Independent_object_kind</a></code></p></td>
 </tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ingredients</strong>: <code>List&lt;<a href="#_substance_kind_class">Substance_kind</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Constituent substances</p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1752,7 +1766,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>other_identifiers</strong>: <code>List&lt;<a href="#_id_use_class">Id_use</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>other_identifiers</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_id_use_class" target="_blank" rel="noopener">Id_use</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Other identifiers as required.</p>
 </div></div></td>
@@ -1988,21 +2002,21 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identities</strong>: <code>List&lt;<a href="#_party_identity_class">Party_identity</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identities</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_party_identity_class" target="_blank" rel="noopener">Party_identity</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Identities used by the Party to identify itself. Most commonly, Agents will have identity/ies (at least legal name), but occasionally, a Persona will have identities as well, e.g. stage names, aliases, nicknames.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>comms_addresses</strong>: <code>List&lt;<a href="#_comms_address_use_class">Comms_address_use</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>comms_addresses</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_comms_address_use_class" target="_blank" rel="noopener">Comms_address_use</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Contacts for this party.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identifiers</strong>: <code>List&lt;<a href="#_id_use_class">Id_use</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identifiers</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_id_use_class" target="_blank" rel="noopener">Id_use</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Real world identifiers such as SSN, drivers license, tax number, passport number etc.</p>
 </div></div></td>
@@ -2028,7 +2042,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>location_addresses</strong>: <code>List&lt;<a href="#_location_address_use_class">Location_address_use</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>location_addresses</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_location_address_use_class" target="_blank" rel="noopener">Location_address_use</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>A set of address alternatives for this contact purpose and time validity combination.</p>
 </div></div></td>
@@ -2115,7 +2129,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>languages</strong>: <code>List&lt;<a href="#_language_capability_class">Language_capability</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>languages</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_language_capability_class" target="_blank" rel="noopener">Language_capability</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
@@ -2157,7 +2171,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>capabilities</strong>: <code>List&lt;<a href="#_capability_class">Capability</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>capabilities</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_capability_class" target="_blank" rel="noopener">Capability</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Capabilities of this Persona.</p>
 </div></div></td>
@@ -2166,336 +2180,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_party_identity_class"><a class="anchor" href="#_party_identity_class"></a>9.5.4. Party_identity Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Party_identity</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>An identity  of a Social entity, such as a person name or company name, and which is used by the party to identify itself. Actual structure is archetyped.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identity_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The value of the identity. This will usually take the form of a small structure of strings.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>use</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>simple_name</strong>: <code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Single string form of name.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Functions</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>purpose</strong> (): <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Purpose of identity, e.g. legal ,  stage name,  nickname,  tribal name,  trading name. Taken from value of inherited <code><em>name</em></code> attribute.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Invariants</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p><em>Purpose_valid</em>: <code>purpose = name</code></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_address_use_class"><a class="anchor" href="#_address_use_class"></a>9.5.5. Address_use Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong><em>Address_use (abstract)</em></strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>address_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Type of address, coded. Typical values: email, sms, pager, phone, messaging.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>purposes</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Purposes for which this address may be used. Typical values include work, home, receiving goods etc.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>time_validity</strong>: <code><a href="/releases/BASE/latest/base.html#_timing_class" target="_blank" rel="noopener">Timing</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Valid times for this contact..</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_location_address_use_class"><a class="anchor" href="#_location_address_use_class"></a>9.5.6. Location_address_use Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Location_address_use</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Address of contact, which may be electronic or geographic.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_address_use_class">Address_use</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Archetypable structured address.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Functions</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>type</strong> (): <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Type of address, e.g. electronic, locality. Taken from value of inherited <code><em>name</em></code> attribute.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Invariants</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p><em>Type_valid</em>: <code>type = name</code></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_comms_address_use_class"><a class="anchor" href="#_comms_address_use_class"></a>9.5.7. Comms_address_use Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Comms_address_use</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Means of communicating with a Party.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="#_address_use_class">Address_use</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>address</strong>: <code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Individual address, including email, phone,</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>address_platform</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Where relevant, e,g, for <code>address_type = messaging</code>, a platform such as 'whatsapp' may be specified.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Functions</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>purpose</strong> (): <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Purpose for which this contact is used, e.g. mail,  daytime phone, etc. Taken from value of inherited <code><em>name</em></code> attribute.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Invariants</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p><em>Purpose_valid</em>: <code>purpose = name</code></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_capability_class"><a class="anchor" href="#_capability_class"></a>9.5.8. Capability Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Capability</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>Capability of an Agent Persona, such as  GP, vascular surgeon. Capability is based on credentials, normally professional certifications.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code><a href="/releases/BASE/latest/base.html#_text_class" target="_blank" rel="noopener">Text</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>credentials</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The qualifications of the performer of the role for this capability. This might include professional qualifications and official identifications such as provider numbers etc.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>time_validity</strong>: <code><a href="/releases/BASE/latest/base.html#_interval_class">Interval<sup></a>&lt;<a href="/releases/BASE/latest/base.html#_date_class">Date</sup></a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Valid time interval for the credentials of this capability.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_language_capability_class"><a class="anchor" href="#_language_capability_class"></a>9.5.9. Language_capability Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Language_capability</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>language</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Languages which can be used to communicate with this actor, in preferred order of use (if known, else order irrelevant).</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>preferred</strong>: <code>Boolean</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_aggregate_agent_class"><a class="anchor" href="#_aggregate_agent_class"></a>9.5.10. Aggregate_agent Class</h4>
+<h4 id="_aggregate_agent_class"><a class="anchor" href="#_aggregate_agent_class"></a>9.5.4. Aggregate_agent Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2538,7 +2223,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_org_entity_class"><a class="anchor" href="#_org_entity_class"></a>9.5.11. Org_entity Class</h4>
+<h4 id="_org_entity_class"><a class="anchor" href="#_org_entity_class"></a>9.5.5. Org_entity Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2579,7 +2264,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_org_unit_class"><a class="anchor" href="#_org_unit_class"></a>9.5.12. Org_unit Class</h4>
+<h4 id="_org_unit_class"><a class="anchor" href="#_org_unit_class"></a>9.5.6. Org_unit Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2608,7 +2293,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_organization_class"><a class="anchor" href="#_organization_class"></a>9.5.13. Organization Class</h4>
+<h4 id="_organization_class"><a class="anchor" href="#_organization_class"></a>9.5.7. Organization Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2640,7 +2325,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_individual_agent_class"><a class="anchor" href="#_individual_agent_class"></a>9.5.14. Individual_agent Class</h4>
+<h4 id="_individual_agent_class"><a class="anchor" href="#_individual_agent_class"></a>9.5.8. Individual_agent Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2666,7 +2351,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_automaton_class"><a class="anchor" href="#_automaton_class"></a>9.5.15. Automaton Class</h4>
+<h4 id="_automaton_class"><a class="anchor" href="#_automaton_class"></a>9.5.9. Automaton Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2692,7 +2377,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_person_class"><a class="anchor" href="#_person_class"></a>9.5.16. Person Class</h4>
+<h4 id="_person_class"><a class="anchor" href="#_person_class"></a>9.5.10. Person Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2718,7 +2403,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_party_relationship_class"><a class="anchor" href="#_party_relationship_class"></a>9.5.17. Party_relationship Class</h4>
+<h4 id="_party_relationship_class"><a class="anchor" href="#_party_relationship_class"></a>9.5.11. Party_relationship Class</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -2784,54 +2469,6 @@
 <th class="tableblock halign-center valign-top"></th>
 <td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
 <p><em>Type_validity</em>: <code>type = name</code></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_id_use_class"><a class="anchor" href="#_id_use_class"></a>9.5.18. Id_use Class</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 55.5556%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Class</strong></p></th>
-<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Id_use</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Description</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>An identifier with associated use meta-data.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>tag</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Human readable tag, e.g. 'SSN', 'drivers license', used for display and search.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>original_id</strong>: <code><a href="/releases/BASE/latest/base.html#_rwe_id_ref_class" target="_blank" rel="noopener">Rwe_id_ref</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The used identifier.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Meta-data relating to use,</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3022,7 +2659,7 @@ care organisation.</p>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>addresses</strong>: <code>List&lt;<a href="#_location_address_use_class">Location_address_use</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>addresses</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_location_address_use_class" target="_blank" rel="noopener">Location_address_use</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Addresses of a Place within one or more address spaces.</p>
 </div></div></td>
@@ -3511,7 +3148,7 @@ care organisation.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-24 07:41:07 -0600
+Last updated 2024-09-24 09:03:16 -0600
 </div>
 </div>
 </body>
