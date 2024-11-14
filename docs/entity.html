@@ -304,7 +304,7 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Release</strong>: ENTITY Release-0.8.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Release</strong>: ENTITY Release-0.8.7</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong>: DEVELOPMENT</p></td>
 </tr>
 <tr>
@@ -363,13 +363,24 @@
 </thead>
 <tbody>
 <tr>
+<th class="tableblock halign-center valign-top" colspan="4"><p class="tableblock"><strong>BASE Release 0.8.7</strong></p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue"></a>0.8.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://specifications.s2health.org/tickets/S2ENTITY-10" target="_blank" rel="noopener">S2ENTITY-10</a>: Replace <code>domain_type</code> attribute with inheritance from <code>Info_item</code>.
+ <a href="https://specifications.s2health.org/tickets/S2ENTITY-11" target="_blank" rel="noopener">S2ENTITY-11</a>: Replace domain specific <code>Info_item</code> descendant types with <code>Info_item</code>.
+ <a href="https://specifications.s2health.org/tickets/S2ENTITY-12" target="_blank" rel="noopener">S2ENTITY-12</a>: Convert <code>Accountability</code> class to <code>Node</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T Beale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue_date"></a>04 Nov 2024</p></td>
+</tr>
+<tr>
 <th class="tableblock halign-center valign-top" colspan="4"><p class="tableblock"><strong>BASE Release 0.8.6</strong></p></th>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue"></a>0.8.6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://specifications.s2health.org/tickets/S2ENTITY-9" target="_blank" rel="noopener">S2ENTITY-9</a>: Move Party subordinate classes to BASE as subtypes of Info_node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.8.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://specifications.s2health.org/tickets/S2ENTITY-9" target="_blank" rel="noopener">S2ENTITY-9</a>: Move <code>Party</code> subordinate classes to BASE as subtypes of <code>Info_node</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">T Beale</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="latest_issue_date"></a>07 Oct 2024</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07 Oct 2024</p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top" colspan="4"><p class="tableblock"><strong>BASE Release 0.8.5</strong></p></th>
@@ -657,19 +668,12 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_info_item_class" target="_blank" rel="noopener">Info_item</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Signature</strong></p></th>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Meaning</strong></p></th>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>domain_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>URI to a detailed description of the concrete type of Entity represented by instances of any descendant of this class. For example, a specific archetype of <code>Person</code> might be used to represent Employees. This field might then contain a URI pointing to the relevant description of 'employee' within the owning organisation.</p>
-</div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
@@ -705,7 +709,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_info_item_class" target="_blank" rel="noopener">Info_item</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -717,13 +721,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>source</strong>: <code><a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Source of relationship, may be understood as 'owner' of relationship.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>domain_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Type of relationship, such as  employment,  authority,  health provider.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -771,7 +768,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_info_item_class" target="_blank" rel="noopener">Info_item</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -783,13 +780,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>members</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_object_ref_class" target="_blank" rel="noopener">Object_ref</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Individual relationships within this group (type).</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>domain_type</strong>: <code><a href="/releases/BASE/latest/base.html#_terminology_term_class" target="_blank" rel="noopener">Terminology_term</a></code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>URI to a detailed description of the concrete type of Entity represented by instances of any descendant of this class. For example, a specific archetype of <code>Person</code> might be used to represent Employees. This field might then contain a URI pointing to the relevant description of 'employee' within the owning organisation.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -861,7 +851,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Inherit</strong></p></th>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_locatable_class" target="_blank" rel="noopener">Locatable</a></code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><a href="/releases/BASE/latest/base.html#_info_item_class" target="_blank" rel="noopener">Info_item</a></code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>Attributes</strong></p></th>
@@ -1952,7 +1942,7 @@
 <p>Relationships between Parties in the real world may be expressed using <code>Party_relationship</code> instances. Relationships are considered directional, hence the use of the attribute names <code><em>source</em></code> and <code><em>target</em></code>.</p>
 </div>
 <div class="paragraph">
-<p>A Party Relationship may have a <code><em>scoper</em></code> of type <code>Accountability</code>. Accountability types are defined by one Party in the relationship, and are used to represent job posts (formal and informal) and other responsibilities that might be filled by another Party. From the point of view of the Party defining the scope of a Party Relationship, accountabilities are understood as <em>types</em>, since multiple Parties (say, Persons who are software developer) may have the same Accountability (say, 'Python developer').</p>
+<p>A Party Relationship may have a <code><em>scoper</em></code> of type <code>Node</code>, which is used to logically represent an accountability. Accountability types are defined by one Party in the relationship, and are used to represent job posts (formal and informal) and other responsibilities that might be filled by another Party. From the point of view of the Party defining the scope of a Party Relationship, accountabilities are understood as <em>types</em>, since multiple Parties (say, Persons who are software developer) may have the same Accountability (say, 'Python developer').</p>
 </div>
 <div class="sect3">
 <h4 id="_versioning_semantics"><a class="anchor" href="#_versioning_semantics"></a>9.4.1. Versioning Semantics</h4>
@@ -2002,30 +1992,30 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identities</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_party_identity_class" target="_blank" rel="noopener">Party_identity</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Identities used by the Party to identify itself. Most commonly, Agents will have identity/ies (at least legal name), but occasionally, a Persona will have identities as well, e.g. stage names, aliases, nicknames.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>comms_addresses</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_comms_address_use_class" target="_blank" rel="noopener">Comms_address_use</a>&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Contacts for this party.</p>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identifiers</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_id_use_class" target="_blank" rel="noopener">Id_use</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identifiers</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Real world identifiers such as SSN, drivers license, tax number, passport number etc.</p>
 </div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>accountability_types</strong>: <code>List&lt;<a href="#_accountability_class">Accountability</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identities</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Types of formal accountability defined by this Party. For an Organisation, may be understood as organisational post types, i.e. potentially available jobs.</p>
+<p>Identities used by the Party to identify itself. Most commonly, Agents will have identity/ies (at least legal name), but occasionally, a Persona will have identities as well, e.g. stage names, aliases, nicknames.</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>comms_addresses</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contacts for this party.</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>location_addresses</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A set of address alternatives for this contact purpose and time validity combination.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2042,9 +2032,9 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>location_addresses</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_location_address_use_class" target="_blank" rel="noopener">Location_address_use</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>accountability_types</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A set of address alternatives for this contact purpose and time validity combination.</p>
+<p>Types of formal accountability defined by this Party. For an Organisation, may be understood as organisational post types, i.e. potentially available jobs.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2129,7 +2119,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>languages</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_language_capability_class" target="_blank" rel="noopener">Language_capability</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>languages</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
@@ -2171,7 +2161,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>1..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>capabilities</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_capability_class" target="_blank" rel="noopener">Capability</a>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>capabilities</strong>: <code>List&lt;<a href="/releases/BASE/latest/base.html#_node_class" target="_blank" rel="noopener">Node</a>&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Capabilities of this Persona.</p>
 </div></div></td>
@@ -2432,7 +2422,7 @@
 </tr>
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock"><strong>0..1</strong></p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>scoper</strong>: <code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>scoper</strong>: <code><a href="/releases/BASE/latest/base.html#_entity_ref_node_class" target="_blank" rel="noopener">Entity_ref_node</a></code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The Accountability type defining the scope of this relationship; typically a job post.</p>
 </div></div></td>

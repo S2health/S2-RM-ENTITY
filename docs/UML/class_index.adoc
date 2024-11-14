@@ -6,8 +6,6 @@
 ==== Package entity
 
 [.xcode]
-* link:/releases/ENTITY/{entity_release}/entity.html#_accountability_class[Accountability^]
-[.xcode]
 * link:/releases/ENTITY/{entity_release}/entity.html#_agent_class[Agent^]
 [.xcode]
 * link:/releases/ENTITY/{entity_release}/entity.html#_aggregate_agent_class[Aggregate_agent^]

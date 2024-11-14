@@ -16,7 +16,7 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*scoper*: `String`
+|*scoper*: `link:/releases/BASE/{base_release}/base.html#_entity_ref_node_class[Entity_ref_node^]`
 a|The Accountability type defining the scope of this relationship; typically a job post.
 
 h|*1..1 +

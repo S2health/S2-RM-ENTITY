@@ -24,6 +24,6 @@ a|Personas of an Agent based on Capabilities. A Persona corresponds to the poten
 For example, the Person Margaret Smith may have a Persona based on her GP (medical) credentials, and another based on her amateur opera singing Capability. She could therefore work as a GP in a health practice and also as a singer in a drama society.
 
 h|*0..1*
-|*languages*: `List<link:/releases/BASE/{base_release}/base.html#_language_capability_class[Language_capability^]>`
+|*languages*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
 a|
 |===

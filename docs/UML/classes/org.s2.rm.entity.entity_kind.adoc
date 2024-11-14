@@ -9,7 +9,7 @@ h|*Description*
 2+a|
 
 h|*Inherit*
-2+|`link:/releases/BASE/{base_release}/base.html#_locatable_class[Locatable^]`
+2+|`link:/releases/BASE/{base_release}/base.html#_info_item_class[Info_item^]`
 
 h|*Attributes*
 ^h|*Signature*

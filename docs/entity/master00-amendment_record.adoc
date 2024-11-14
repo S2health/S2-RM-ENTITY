@@ -4,12 +4,21 @@
 |===
 |Issue|Details|Raiser|Completed
 
+4+^h|*BASE Release 0.8.7*
+
+|[[latest_issue]]0.8.7
+|{spec_tickets}/S2ENTITY-10[S2ENTITY-10^]: Replace `domain_type` attribute with inheritance from `Info_item`.
+ {spec_tickets}/S2ENTITY-11[S2ENTITY-11^]: Replace domain specific `Info_item` descendant types with `Info_item`.
+ {spec_tickets}/S2ENTITY-12[S2ENTITY-12^]: Convert `Accountability` class to `Node`.
+|T Beale
+|[[latest_issue_date]]04 Nov 2024
+
 4+^h|*BASE Release 0.8.6*
 
-|[[latest_issue]]0.8.6
-|{spec_tickets}/S2ENTITY-9[S2ENTITY-9^]: Move Party subordinate classes to BASE as subtypes of Info_node
+|0.8.6
+|{spec_tickets}/S2ENTITY-9[S2ENTITY-9^]: Move `Party` subordinate classes to BASE as subtypes of `Info_node`.
 |T Beale
-|[[latest_issue_date]]07 Oct 2024
+|07 Oct 2024
 
 4+^h|*BASE Release 0.8.5*
 

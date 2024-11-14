@@ -31,7 +31,7 @@ TBD
 
 Relationships between Parties in the real world may be expressed using `Party_relationship` instances. Relationships are considered directional, hence the use of the attribute names `_source_` and `_target_`.
 
-A Party Relationship may have a `_scoper_` of type `Accountability`. Accountability types are defined by one Party in the relationship, and are used to represent job posts (formal and informal) and other responsibilities that might be filled by another Party. From the point of view of the Party defining the scope of a Party Relationship, accountabilities are understood as _types_, since multiple Parties (say, Persons who are software developer) may have the same Accountability (say, 'Python developer').
+A Party Relationship may have a `_scoper_` of type `Node`, which is used to logically represent an accountability. Accountability types are defined by one Party in the relationship, and are used to represent job posts (formal and informal) and other responsibilities that might be filled by another Party. From the point of view of the Party defining the scope of a Party Relationship, accountabilities are understood as _types_, since multiple Parties (say, Persons who are software developer) may have the same Accountability (say, 'Python developer').
 
 === Versioning Semantics
 
