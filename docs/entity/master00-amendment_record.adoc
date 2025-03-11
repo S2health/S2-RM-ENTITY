@@ -6,16 +6,16 @@
 
 [cols="1,6,2,2", options="header"]
 |===
-|Issue|Details|Raiser|Completed
+|Issue|Details|Contributor|Completed
 
 4+^h|*BASE Release 0.8.7*
 
-|[[latest_issue]]0.8.7
+|[[latest_issue,0.8.7]]0.8.7
 |{spec_tickets}/S2ENTITY-10[S2ENTITY-10^]: Replace `domain_type` attribute with inheritance from `Info_item`.
  {spec_tickets}/S2ENTITY-11[S2ENTITY-11^]: Replace domain specific `Info_item` descendant types with `Info_item`.
  {spec_tickets}/S2ENTITY-12[S2ENTITY-12^]: Convert `Accountability` class to `Node`.
 |T Beale
-|[[latest_issue_date]]04 Nov 2024
+|[[latest_issue_date,04 Nov 2024]]04 Nov 2024
 
 4+^h|*BASE Release 0.8.6*
 
