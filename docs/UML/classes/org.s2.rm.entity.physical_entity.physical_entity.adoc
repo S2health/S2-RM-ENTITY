@@ -11,7 +11,7 @@ h|*Description*
 The `kind` property indicates an ontological kind,
 
 h|*Inherit*
-2+|`<<_entity_class,Entity>>`
+2+|`link:/releases/S2-RM-ENTITY/{entity_release}/docs/entity.html#_entity_class[Entity^]`
 
 h|*Attributes*
 ^h|*Signature*
@@ -22,6 +22,6 @@ h|*1..1*
 a|Direct reference to instance of Physical_entity_kind of which this entity is a material instance.
 
 h|*0..1*
-|*kind_ref*: `link:/releases/BASE/{base_release}/base.html#_object_ref_class[Object_ref^]`
+|*kind_ref*: `link:/releases/S2-RM-BASE/{base_release}/docs/model_support.html#_object_ref_class[Object_ref^]`
 a|Identifier of instance of Physical_entity_kind of which this entity is a material instance.
 |===

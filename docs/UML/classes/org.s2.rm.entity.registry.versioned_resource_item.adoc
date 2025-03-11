@@ -9,6 +9,6 @@ h|*Description*
 2+a|Static type formed by binding generic parameter of `VERSIONED_OBJECT<T>` to `ENTITY`.
 
 h|*Inherit*
-2+|`link:/releases/BASE/{base_release}/base.html#_versioned_object_class[Versioned_object^]`
+2+|`link:/releases/S2-RM-BASE/{base_release}/docs/change_control.html#_versioned_object_class[Versioned_object^]`
 
 |===

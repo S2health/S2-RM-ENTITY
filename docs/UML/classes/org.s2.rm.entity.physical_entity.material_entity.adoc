@@ -16,22 +16,22 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*identifier*: `link:/releases/BASE/{base_release}/base.html#_rwe_id_ref_class[Rwe_id_ref^]`
+|*identifier*: `link:/releases/S2-RM-BASE/{base_release}/docs/data_types.html#_rwe_id_ref_class[Rwe_id_ref^]`
 a|Identifier assigned by owning / using institution or organization.
 
 h|*0..1*
-|*individual_attributes*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+|*individual_attributes*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Attributes of this material entity, as distinct from its type (such as a device type description). Typically includes serial number, UDI, etc.
 
 h|*0..1*
-|*lot_information*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+|*lot_information*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Information relating to a manufacturing or purchase lot, for volume procured items.
 
 h|*0..1*
-|*use_details*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+|*use_details*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Details relating to use, location, maintenance.
 
 h|*0..1*
-|*other_identifiers*: `List<link:/releases/BASE/{base_release}/base.html#_id_use_class[Id_use^]>`
+|*other_identifiers*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Other identifiers as required.
 |===

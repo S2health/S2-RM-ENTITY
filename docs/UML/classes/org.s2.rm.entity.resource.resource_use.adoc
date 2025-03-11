@@ -1,0 +1,37 @@
+=== Resource_use Class
+
+[cols="^1,3,5"]
+|===
+h|*Class*
+2+^h|*__Resource_use (abstract)__*
+
+h|*Description*
+2+a|Record of the utilisation of some Entity, in the role of a specific kind of Resource. Archetypes provide models of kinds of use.
+
+h|*Inherit*
+2+|`link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_locatable_class[Locatable^]`
+
+h|*Attributes*
+^h|*Signature*
+^h|*Meaning*
+
+h|*1..1*
+|*start_time*: `link:/releases/S2-RM-BASE/{base_release}/docs/foundation_types.html#_date_time_class[Date_time^]`
+a|Time at which resource use commenced.
+
+h|*0..1*
+|*duration*: `link:/releases/S2-RM-BASE/{base_release}/docs/foundation_types.html#_duration_class[Duration^]`
+a|Duration of resource use.
+
+h|*0..1*
+|*cost_data*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
+a|Cost data for this resource use.
+
+h|*0..1*
+|*description*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
+a|Detailed description of this resource utilisation.
+
+h|*0..1*
+|*resource*: `List<link:/releases/S2-RM-ENTITY/{entity_release}/docs/entity.html#_entity_class[Entity^]>`
+a|
+|===

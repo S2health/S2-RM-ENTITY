@@ -20,6 +20,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*addresses*: `List<link:/releases/BASE/{base_release}/base.html#_location_address_use_class[Location_address_use^]>`
+|*addresses*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Addresses of a Place within one or more address spaces.
 |===

@@ -30,20 +30,21 @@ include::master00-amendment_record.adoc[leveloffset=+1]
 
 === Editor
 
-* Thomas Beale, Ars Semantica (UK); openEHR Foundation Management Board.
+* Thomas Beale, Graphite Health; openEHR Foundation Board.
 
 === Contributors
 
-This specification benefited from wide formal and informal input from the openEHR and wider health informatics community. The openEHR Foundation would like to recognise the following people for their contributions.
+This specification benefited from input from the S2 and wider health informatics community. S2Health would like to recognise the following people for their contributions.
 
-* Erik Sundvall, Karolinska Institute, Sweden
-* Pablo Pazos, Cabolabs, Uruguay
+* Stan Huff MD, PhD, Graphite health; University of Utah;
+* Joey Coyle MD, PhD, Graphite health;
+* Nathan Davis, Graphite health.
 
 === Support
 
-The work reported in this paper has been funded in part by the following organisations:
+The work reported in this paper has been funded by the following organisations:
 
-* Ars Semantica (UK).
+* Graphite Health <www.graphitehealth.io>.
 
 //
 // --------------------------------------------- TOC -----------------------------------------------
@@ -55,26 +56,45 @@ The work reported in this paper has been funded in part by the following organis
 //
 :sectnums:
 
-ifdef::package_qualifiers[]
-:pkg: org.s2.rm.entity.
-endif::[]
-
 include::master01-preface.adoc[leveloffset=+1]
 include::master02-overview.adoc[leveloffset=+1]
+
+ifdef::package_qualifiers[]
+:pkg: org.s2.rm.entity.entity.
+endif::[]
 include::master03-entity.adoc[leveloffset=+1]
 
+ifdef::package_qualifiers[]
+:pkg: org.s2.rm.entity.entity_kind.
+endif::[]
 include::master04-entity_kind_continuant.adoc[leveloffset=+1]
 include::master05-entity_kind_occurrent.adoc[leveloffset=+1]
 
+ifdef::package_qualifiers[]
+:pkg: org.s2.rm.entity.physical_entity.
+endif::[]
 include::master06-physical_entity.adoc[leveloffset=+1]
+
+ifdef::package_qualifiers[]
+:pkg: org.s2.rm.entity.occurrent.
+endif::[]
 include::master07-occurrent_entity.adoc[leveloffset=+1]
 
+ifdef::package_qualifiers[]
+:pkg: org.s2.rm.entity.social_entity.
+endif::[]
 include::master08-social_entity.adoc[leveloffset=+1]
 include::master09-social_entity-party.adoc[leveloffset=+1]
 include::master10-social_entity-asset.adoc[leveloffset=+1]
 
+ifdef::package_qualifiers[]
+:pkg: org.s2.rm.entity.resource.
+endif::[]
 include::master11-resource.adoc[leveloffset=+1]
 
+ifdef::package_qualifiers[]
+:pkg: org.s2.rm.entity.registry.
+endif::[]
 include::master12-registry.adoc[leveloffset=+1]
 
 //

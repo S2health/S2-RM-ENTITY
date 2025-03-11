@@ -2,15 +2,9 @@
 
 == Purpose
 
-This document describes the architecture of the S2 Entity Information Model. The semantics are drawn from the {openehr_rm_demographic}[openEHR Demographic Information Model^] and ontologies, including the {bfo}[Basic Formal Ontology (BFO)^].
+This document describes the architecture of the {product_name} Entity Information Model. The semantics are drawn from the {openehr_rm_demographic}[openEHR Demographic Information Model^] and ontologies, including the {bfo}[Basic Formal Ontology (BFO)^].
 
-The intended audience includes:
-
-* Standards bodies producing health informatics standards;
-* Academic groups using openEHR;
-* The open source healthcare community;
-* Solution vendors;
-* Medical informaticians and clinicians interested in health information.
+The intended audience includes developers of health informatics standards; implementers and health data managers.
 
 == Related Documents
 
@@ -20,20 +14,23 @@ Prerequisite documents for reading this document include:
 
 Related documents include:
 
-* The {s2_base_model_support}[S2 Base Types Information Model^];
-* The {s2_base_data_types}[S2 Data Types Information Model^];
+* The {s2_base_patterns}[S2 Patterns Model^].
 
 == Status
 
-This specification is in the Stable state. The development version of this document can be found at {openehr_rm_latest_entity}[{openehr_rm_latest_entity}^].
+This specification is in the {spec_status} state. The development version of this document can be found at {s2_entity_latest_entity}[{s2_entity_latest_entity}^].
 
 Known omissions or questions are indicated in the text with a 'to be determined' paragraph, as follows:
 [.tbd]
 *TBD*: (example To Be Determined paragraph)
 
+== Prior Art
+
+The 'social entity' part of this specification has origins in the work that led to the {openehr_rm_demographic}[openEHR Demographic Model^]. The 'physical entity' part is based on {bfo}[Basic Formal Ontology^].
+
 == Feedback
 
-Feedback may be provided on the {s2_rm_forum}[openEHR RM specifications forum^].
+Feedback may be provided on the {s2_specifications_forum}[{product_name} forum^].
 
 Issues may be raised on the {component_prs}[specifications Problem Report tracker^].
 
@@ -41,5 +38,6 @@ To see changes made due to previously reported issues, see the {component_histor
 
 == Conformance
 
-Conformance of a data or software artifact to an openEHR specification is determined by a formal test of that artifact against the relevant openEHR Implementation Technology Specification(s) (ITSs), such as an IDL interface or an XML-schema. Since ITSs are formal derivations from underlying models, ITS conformance indicates model conformance.
+Conformance of a data or software artifact to an {product_name} specification is determined by a formal test of that artifact against the relevant {product_name} Implementation Technology Specification(s) (ITSs), such as a JSON-schema or OpenAPI specification. Since ITSs are formal derivations from underlying models, ITS conformance indicates model conformance.
+
 

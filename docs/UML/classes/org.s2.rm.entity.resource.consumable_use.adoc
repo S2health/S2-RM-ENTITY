@@ -18,6 +18,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*amount*: `link:/releases/BASE/{base_release}/base.html#_decimal_class[Decimal^]`
+|*amount*: `link:/releases/S2-RM-BASE/{base_release}/docs/foundation_types.html#_decimal_class[Decimal^]`
 a|Amount of resource consumed.
 |===

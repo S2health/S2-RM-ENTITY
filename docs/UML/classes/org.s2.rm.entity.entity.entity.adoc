@@ -9,14 +9,14 @@ h|*Description*
 2+a|Continuant Entity whose identity is stable over its period of existence. Includes physical entities as well as other kinds of entities from the social, legal and business worlds, including intentional agents.
 
 h|*Inherit*
-2+|`link:/releases/BASE/{base_release}/base.html#_info_item_class[Info_item^]`
+2+|`link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_info_item_class[Info_item^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*0..1*
-|*other_details*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+|*other_details*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Archetypable generic description for this entity.
 
 h|*0..1*

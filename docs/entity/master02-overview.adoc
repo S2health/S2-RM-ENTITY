@@ -1,6 +1,6 @@
 = Overview
 
-The openEHR Entity model defines formal representation for various kinds of real world entity, including 'things' such as devices and medicines, biological organisms (including human), as well as all kinds of 'social entity', which includes persons and organisations (parties), in the socio-legal sense, as well as 'assets', i.e. objects as owned and/or used by parties.
+The {product} Entity model defines formal representation for various kinds of real world entity, including 'things' such as devices and medicines, biological organisms (including human), as well as all kinds of 'social entity', which includes persons and organisations (parties), in the socio-legal sense, as well as 'assets', i.e. objects as owned and/or used by parties.
 
 Instances of the Entity model correspond to the contents of typical industry repositories for patients, e.g. 'master patient index', 'provider registry', as well as asset registries and many kinds of 'reference data' repositories.
 

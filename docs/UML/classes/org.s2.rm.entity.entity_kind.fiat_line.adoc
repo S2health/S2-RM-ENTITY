@@ -18,6 +18,6 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*1..1*
-|*is_closed*: `link:/releases/BASE/{base_release}/base.html#_boolean_class[Boolean^]`
+|*is_closed*: `link:/releases/S2-RM-BASE/{base_release}/docs/foundation_types.html#_boolean_class[Boolean^]`
 a|If True, the line is closed, and forms the boundary of a surface.
 |===

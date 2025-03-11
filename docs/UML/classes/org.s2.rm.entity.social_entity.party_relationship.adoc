@@ -9,24 +9,24 @@ h|*Description*
 2+a|A relationship between parties. In BFO terms, a Relational quality, i.e. a Quality that s-depends on the parties of the relation.
 
 h|*Inherit*
-2+|`<<_entity_relationship_class,Entity_relationship>>`
+2+|`link:/releases/S2-RM-ENTITY/{entity_release}/docs/entity.html#_entity_relationship_class[Entity_relationship^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*0..1*
-|*scoper*: `link:/releases/BASE/{base_release}/base.html#_entity_ref_node_class[Entity_ref_node^]`
+|*scoper*: `link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_entity_ref_node_class[Entity_ref_node^]`
 a|The Accountability type defining the scope of this relationship; typically a job post.
 
 h|*1..1 +
 (redefined)*
-|*source*: `link:/releases/BASE/{base_release}/base.html#_object_ref_class[Object_ref^]`
+|*source*: `link:/releases/S2-RM-BASE/{base_release}/docs/model_support.html#_object_ref_class[Object_ref^]`
 a|Source of relationship, may be understood as 'owner' of relationship.
 
 h|*1..1 +
 (redefined)*
-|*target*: `link:/releases/BASE/{base_release}/base.html#_object_ref_class[Object_ref^]`
+|*target*: `link:/releases/S2-RM-BASE/{base_release}/docs/model_support.html#_object_ref_class[Object_ref^]`
 a|Target of relationship.
 
 h|*Invariants*

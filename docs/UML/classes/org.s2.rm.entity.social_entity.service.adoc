@@ -11,6 +11,6 @@ h|*Description*
 TBD: detail.
 
 h|*Inherit*
-2+|`<<_process_kind_class,Process_kind>>`
+2+|`link:/releases/S2-RM-ENTITY/{entity_release}/docs/entity_kind.html#_process_kind_class[Process_kind^]`
 
 |===

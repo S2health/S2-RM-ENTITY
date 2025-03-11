@@ -9,13 +9,13 @@ h|*Description*
 2+a|An entity whose existence and description are within the social world, i.e. civil, business, legal realms.
 
 h|*Inherit*
-2+|`<<_entity_class,Entity>>`
+2+|`link:/releases/S2-RM-ENTITY/{entity_release}/docs/entity.html#_entity_class[Entity^]`
 
 h|*Attributes*
 ^h|*Signature*
 ^h|*Meaning*
 
 h|*1..1*
-|*r_material_bearer*: `<<_physical_entity_class,Physical_entity>>`
+|*r_material_bearer*: `link:/releases/S2-RM-ENTITY/{entity_release}/docs/physical_entity.html#_physical_entity_class[Physical_entity^]`
 a|The material entity in which this social entity inheres. Not necessarily implemented or populated.
 |===

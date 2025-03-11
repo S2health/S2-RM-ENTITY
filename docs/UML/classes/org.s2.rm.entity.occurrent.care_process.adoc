@@ -16,10 +16,10 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*subject*: `link:/releases/BASE/{base_release}/base.html#_entity_ref_node_class[Entity_ref_node^]`
+|*subject*: `link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_entity_ref_node_class[Entity_ref_node^]`
 a|
 
 h|*1..1*
-|*responsible_organization*: `link:/releases/BASE/{base_release}/base.html#_entity_ref_node_class[Entity_ref_node^]`
+|*responsible_organization*: `link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_entity_ref_node_class[Entity_ref_node^]`
 a|A reference to the Organization that is responsible for the care process.
 |===

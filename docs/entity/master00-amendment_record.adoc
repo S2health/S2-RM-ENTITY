@@ -1,4 +1,8 @@
-= Amendment Record
+= Revision History
+
+.[click here]
+[%collapsible]
+====
 
 [cols="1,6,2,2", options="header"]
 |===
@@ -36,3 +40,5 @@
 |15 Oct 2022
 
 |===
+
+====

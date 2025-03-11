@@ -22,19 +22,19 @@ h|*Attributes*
 ^h|*Meaning*
 
 h|*0..1*
-|*identifiers*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+|*identifiers*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Real world identifiers such as SSN, drivers license, tax number, passport number etc.
 
 h|*0..1*
-|*identities*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+|*identities*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Identities used by the Party to identify itself. Most commonly, Agents will have identity/ies (at least legal name), but occasionally, a Persona will have identities as well, e.g. stage names, aliases, nicknames.
 
 h|*0..1*
-|*comms_addresses*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+|*comms_addresses*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Contacts for this party.
 
 h|*0..1*
-|*location_addresses*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+|*location_addresses*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|A set of address alternatives for this contact purpose and time validity combination.
 
 h|*0..1*
@@ -46,7 +46,7 @@ h|*0..1*
 a|
 
 h|*0..1*
-|*accountability_types*: `List<link:/releases/BASE/{base_release}/base.html#_node_class[Node^]>`
+|*accountability_types*: `List<link:/releases/S2-RM-BASE/{base_release}/docs/patterns.html#_node_class[Node^]>`
 a|Types of formal accountability defined by this Party. For an Organisation, may be understood as organisational post types, i.e. potentially available jobs.
 
 h|*Invariants*
