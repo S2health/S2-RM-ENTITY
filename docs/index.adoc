@@ -26,7 +26,7 @@ endif::[]
 // Use the following version for a named release
 ifeval::["{entity_release}" != "dev"]
 :numbered!:
-= S2 ENTITY Component - Release {entity_release}
+= S2 ENTITY Component {entity_release}
 
 :prs_fixed: {component_prs_fixed}{entity_release}
 :crs_done: {component_crs_done}{entity_release}
